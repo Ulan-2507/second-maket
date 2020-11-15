@@ -1,4 +1,28 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'TT Lakes';
+  src: url("../fonts/TTLakes-Bold.eot");
+  src: local("TT Lakes Bold"), local("TTLakes-Bold"), url("../fonts/TTLakes-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/TTLakes-Bold.woff") format("woff"), url("../fonts/TTLakes-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url("../fonts/TTLakes-Medium.eot");
+  src: local("TT Lakes Medium"), local("TTLakes-Medium"), url("../fonts/TTLakes-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/TTLakes-Medium.woff") format("woff"), url("../fonts/TTLakes-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url("../fonts/TTLakes-Regular.eot");
+  src: local("TT Lakes Regular"), local("TTLakes-Regular"), url("../fonts/TTLakes-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/fonts/TTLakes-Regular.woff") format("woff"), url("../fonts/TTLakes-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
 /*Обнуление*/
 * {
   padding: 0;
@@ -72,10 +96,38 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
+body {
+  font-family: 'TT Lakes';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: #1B1C21;
+  width: 320px;
+  height: 568px;
+  border: 1px solid #000;
+  margin: 50px auto;
+  background-color: #F8F8F8;
+}
+
+/* Visually-hidden
+===================*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  -webkit-clip-path: circle(0);
+          clip-path: circle(0);
+}
+
+[hidden] {
+  display: none;
+}
+
 /* Container
 ===================*/
 .container {
-  max-width: 320px;
   padding: 0 16px;
 }
 
@@ -84,6 +136,8 @@ h1, h2, h3, h4, h5, h6 {
 .header {
   min-height: 88px;
   position: relative;
+  border-bottom: 1px solid #D9FFF5;
+  background-color: #fff;
 }
 
 .header::before {
@@ -102,6 +156,11 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0;
   background-color: #FF3E79;
   border-radius: 50%;
+}
+
+.btn:focus {
+  -webkit-box-shadow: 0 0 0 5px #000;
+          box-shadow: 0 0 0 5px #000;
 }
 
 .menu-top {
@@ -127,6 +186,17 @@ h1, h2, h3, h4, h5, h6 {
   background: url("../img/burger.png") no-repeat center center;
 }
 
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .handling {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -143,10 +213,14 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   width: 2px;
   height: 32px;
-  margin: 0 20px 0 17px;
+  margin: 0 4px 0 0;
   vertical-align: middle;
-  background-color: #000;
+  background-color: #EAEAEA;
   border-radius: 1px;
+}
+
+.handling__button {
+  margin-left: 16px;
 }
 
 .handling__button:first-child::before {
@@ -165,6 +239,173 @@ h1, h2, h3, h4, h5, h6 {
   background: url("../img/checkstatus.png") no-repeat center center;
 }
 
-.connection {
+.connection__button {
+  margin-right: 16px;
+}
+
+.connection__button:first-child::before {
+  content: "";
   display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url("../img/call.png") no-repeat center center;
+}
+
+.connection__button:nth-child(2)::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../img/chat.png") no-repeat center center;
+}
+
+.connection__button:last-child::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 18px;
+  background: url("../img/profile.png") no-repeat center center;
+}
+
+.services__title {
+  position: relative;
+  margin: 24px 0;
+  padding: 0 16px;
+}
+
+.title {
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: -0.6px;
+  font-weight: 700;
+  color: #1B1C21;
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 4px;
+  height: 40px;
+  background: url("../img/highlight.png") no-repeat 0 center;
+}
+
+.services-nav {
+  position: relative;
+}
+
+.services-nav::after {
+  content: "";
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 24px;
+  height: 40px;
+  background: -webkit-gradient(linear, right top, left top, color-stop(16.84%, #F8F8F8), to(rgba(248, 248, 248, 0.0001)));
+  background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+  pointer-events: none;
+}
+
+.services-nav__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow: auto;
+  margin-bottom: 24px;
+  padding-left: 16px;
+}
+
+.services-nav__wrapper::after {
+  content: "";
+  display: block;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 16px;
+}
+
+.services-nav__wrapper > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.services-nav__link {
+  padding: 8px 16px;
+  white-space: nowrap;
+  border: 2px solid transparent;
+  border-radius: 6px;
+}
+
+.services-nav__link:last-child {
+  margin-right: 0;
+}
+
+.services-nav__link:focus, .services-nav__link:hover {
+  background-color: #fff;
+  border-color: #B8FFEC;
+}
+
+.service-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.service-content__text {
+  max-height: 90px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.service-content__text p {
+  margin-bottom: 24px;
+}
+
+.service-content__read-more-label::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 11px;
+  background: url("../img/more.png") no-repeat 0 center;
+  background-size: cover;
+}
+
+.service-content__read-more-label::after {
+  content: "Читать далее";
+  margin-left: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+.service-content__read-more-checkbox:checked + .service-content__text {
+  max-height: none;
+  margin-bottom: 0;
+}
+
+.service-content__read-more-checkbox:checked ~ .service-content__read-more-label::before {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.service-content__read-more-checkbox:checked ~ .service-content__read-more-label::after {
+  content: "Свернуть";
+}
+
+.service-content::after {
+  content: "";
+  display: inline-block;
+  width: 320px;
+  height: 176px;
+  margin-top: 16px;
+  background: url("../img/bg-320.jpg") no-repeat center center;
+  background-size: contain;
 }
