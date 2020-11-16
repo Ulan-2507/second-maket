@@ -7,30 +7,31 @@
         url('../fonts/TTLakes-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'TT Lakes';
-    src: url('../fonts/TTLakes-Medium.eot');
-    src: local('TT Lakes Medium'), local('TTLakes-Medium'),
-        url('../fonts/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/TTLakes-Medium.woff') format('woff'),
-        url('../fonts/TTLakes-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'TT Lakes';
-    src: url('../fonts/TTLakes-Regular.eot');
-    src: local('TT Lakes Regular'), local('TTLakes-Regular'),
-        url('../fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/fonts/TTLakes-Regular.woff') format('woff'),
-        url('../fonts/TTLakes-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-  }
-  
+}
+
+@font-face {
+font-family: 'TT Lakes';
+src: url('../fonts/TTLakes-Medium.eot');
+src: local('TT Lakes Medium'), local('TTLakes-Medium'),
+    url('../fonts/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TTLakes-Medium.woff') format('woff'),
+    url('../fonts/TTLakes-Medium.ttf') format('truetype');
+font-weight: 500;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'TT Lakes';
+src: url('../fonts/TTLakes-Regular.eot');
+src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+    url('../fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/fonts/TTLakes-Regular.woff') format('woff'),
+    url('../fonts/TTLakes-Regular.ttf') format('truetype');
+font-weight: 400;
+font-style: normal;
+}
+
+
 
 /*Обнуление*/
 *{
@@ -73,10 +74,10 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*--------------------*/
 body {
     font-family: 'TT Lakes';
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: 0.2px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
     color: #1B1C21;
     background-color: #F8F8F8;
 }
@@ -93,9 +94,11 @@ body {
     display: none;
 }
 
+
 /* Container
 ===================*/
 .container {
+    min-width: 320px;
     padding: 0 16px;
 }
 
@@ -115,7 +118,20 @@ body {
         top: 19px;
         background: url("../img/logo.png") no-repeat 0 0;
     }
+    &__menu {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 0;
+    }
+    &__connection {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center; 
+    }
 }
+
 .btn {
     width: 40px;
     height: 40px;
@@ -123,16 +139,23 @@ body {
     background-color: #FF3E79;
     border-radius: 50%;
 }
-.btn:focus {
-    box-shadow: 0 0 0 5px #000;
+
+.btn:hover {
+    background-color: #cc0f48;
+    transition: 0.2s linear;
 }
-.menu-top {
+.btn:active {
+    box-shadow: inset 0 0 15px #B8FFEC;
+}
+.btn:focus {
+    filter: drop-shadow(0 0 2px #0b7458);
+}
+
+.menu {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 24px 0;
-    &__button:first-child::before {
+    align-items: center; 
+    &__button::before {
         content: "";
         display: inline-block;
         width: 18px;
@@ -140,45 +163,8 @@ body {
         background: url("../img/burger.png") no-repeat center center;
     }
 }
-.wrapper { 
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center; 
-}
-.handling {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    &::before{
-        content: "";
-        display: inline-block;
-        width: 2px;
-        height: 32px;
-        margin: 0 4px 0 0;
-        vertical-align: middle;
-        background-color: #EAEAEA;
-        border-radius: 1px;
-    }
-    &__button {
-        margin-left: 16px;
-    }
-    &__button:first-child::before {
-        content: "";
-        display: inline-block;
-        width: 20px;
-        height: 20px;        
-        background: url("../img/repair.png") no-repeat center center;
-    }
-    &__button:last-child::before {
-        content: "";
-        display: inline-block;
-        width: 16px;
-        height: 20px;        
-        background: url("../img/checkstatus.png") no-repeat center center;
-    }
-}
-.connection {
 
+.connection {
     &__button {
         margin-right: 16px;
     }
@@ -205,37 +191,76 @@ body {
     }
 }
 
+.handling {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    &[hidden] {
+        display: none;
+    }
+    &::before{
+        content: "";
+        display: inline-block;
+        width: 2px;
+        height: 32px;
+        margin: 0 4px 0 0;
+        background-color: #EAEAEA;
+        border-radius: 1px;
+    }
+    &__button {
+        margin-left: 16px;
+    }
+    &__button:first-of-type::before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;        
+        background: url("../img/repair.png") no-repeat center center;
+    }
+    &__button:last-of-type::before {
+        content: "";
+        display: inline-block;
+        width: 16px;
+        height: 20px;        
+        background: url("../img/checkstatus.png") no-repeat center center;
+    }
+}
 
 .services {
-
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
     &__title {
         position: relative;
-        margin: 24px 0;
-        padding: 0 16px;
+        margin: 24px 0px;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            width: 4px;
+            height: 40px; 
+            margin-left: -16px;       
+            background: url("../img/highlight.png") no-repeat 0 center;
+        }
     }
 }
 
 .title {
-    font-size: 28px;
+    font-size: 28px;            
     line-height: 40px;
     letter-spacing: -0.6px;
     font-weight: 700;
-
     color: #1B1C21;
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: inline-block;
-        width: 4px;
-        height: 40px;        
-        background: url("../img/highlight.png") no-repeat 0 center;
-    }
 }
 
 .services-nav {
     position: relative;
+    margin-right: -16px;
+    
     &::after {
         content: "";
         text-align: right;
@@ -247,25 +272,21 @@ body {
         background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
         pointer-events: none;
     }
+    
     &__wrapper {
         display: flex;
         flex-wrap: nowrap;
         overflow: auto;
         margin-bottom: 24px;
-        padding-left: 16px;
-    &::after {
-        content: "";
-        display: block;
-        flex-shrink: 0;
-        width: 16px;
-    }
-    & > li {
-        display: flex;
-    }
+        
+        & > li {
+            display: flex;
+        }
     }
 
     &__link {
         padding: 8px 16px;
+        color: #7E7E82;
         white-space: nowrap;
         border: 2px solid transparent;
         border-radius: 6px;
@@ -273,24 +294,47 @@ body {
     &__link:last-child {
         margin-right: 0;
     }
-    &__link:focus,
+    
     &__link:hover {
+        color:  #69aedd;
+        transition: .2s linear;
+    }
+    
+    &__link:focus {
         background-color: #fff;
         border-color: #B8FFEC;
+    }
+    &__link:active {
+        box-shadow: inset 0 0 10px #70ceb5;
+        transition: .2s linear;
     }
 }
 
 .service-content {
     display: flex;
     flex-wrap: wrap;
+    &::after {
+        content: "";
+        display: inline-block;
+        width: 320px;
+        height: 176px;
+        margin: 16px auto 0;
+        background: url("../img/bg-320.jpg") no-repeat center center;
+        background-size: contain;
+    }
 
     &__text {
         max-height: 90px;
         overflow: hidden;
         margin-bottom: 16px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0.2px;
     }
+
     &__text p {
-        margin-bottom: 24px;
+        margin-bottom: 1.6em;
     }
     
     &__read-more-label::before {
@@ -304,12 +348,12 @@ body {
     &__read-more-label::after {
         content: "Читать далее";
         margin-left: 16px;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 24px;
-        letter-spacing: -0.2px;
+        
     }
-
+    &__read-more-checkbox:focus ~ &__read-more-label,
+    &__read-more-checkbox:hover ~ &__read-more-label {
+        filter: drop-shadow(0 0 1px #00bfff);
+    }
     &__read-more-checkbox:checked + &__text {
         max-height: none;
         margin-bottom: 0;
@@ -321,18 +365,8 @@ body {
         content: "Свернуть";
     }
 }
-.service-content::after {
-    content: "";
-    display: inline-block;
-    width: 320px;
-    height: 176px;
-    margin-top: 16px;
-    background: url("../img/bg-320.jpg") no-repeat center center;
-    background-size: contain;
 
-}
-
-
+@import "media.scss";
 
 
 

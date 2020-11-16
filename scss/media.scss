@@ -1,0 +1,126 @@
+@media only screen and (max-width: 320px){
+    .service-content {
+        &::after {
+            margin: 16px -16px 0;
+        }
+    }
+}
+@media only screen and (min-width: 375px){
+    .service-content {
+        &::after {
+            width: 360px;
+            height: 208px;
+            background: url("../img/bg-768.jpg") no-repeat center center;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .container {
+        padding: 0 24px;
+    }
+    .header {
+        &::before{
+            left: 107px; 
+        }
+    }
+
+    .menu {
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 2px;
+            height: 32px;
+            margin-left: 20px;
+            vertical-align: middle;
+            background-color: #EAEAEA;
+            border-radius: 1px; 
+        }
+    }
+
+    .connection[hidden] {
+        display: block;
+    }
+
+    .services {
+        &__title {
+            &::before { 
+                margin-left: -24px;       
+            }
+        }
+    }
+    .services-nav {
+		&__wrapper {
+            margin-bottom: 32px;
+		}
+    }
+
+    .service-content {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        &__wrapper {
+            width: 50%;
+        }
+        &__text {
+            max-height: 160px;
+            line-height: 20px;
+            margin-bottom: 10px;
+        }
+        &::after {
+            margin: 0 0 0 24px;
+            border-radius: 6px;
+            
+        }
+    }
+}
+
+@media only screen and (min-width: 1120px){
+    .container {
+        max-width: 1120px;
+        padding: 0 32px;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .handling {
+        &[hidden] {
+            display: flex;
+        }
+        &::before{
+            display: none;
+        }
+        &__btn-label {
+            margin: 0 9px 0 32px;
+        }
+    }
+
+    .services {
+        &__title {
+            margin-top: 42px;
+            &::before { 
+                margin-left: -32px;       
+            }
+        }
+        
+    }
+
+    .services-nav {
+        &__wrapper {
+            flex-wrap: wrap;
+        }
+
+        &__link[hidden] {
+            display: block;
+        }
+    }
+
+    .service-content::after {
+        width: 531px;
+        height: 307px;
+        margin: 0 30px 0 0;
+        border-radius: 6px;
+        background: url("../img/bg-1120.jpg") no-repeat center center;
+    }
+}
