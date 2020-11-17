@@ -177,8 +177,10 @@ body {
   width: 40px;
   height: 40px;
   font-size: 0;
-  background-color: #FF3E79;
   border-radius: 50%;
+  background-color: #FF3E79;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .btn:hover {
@@ -197,6 +199,30 @@ body {
           filter: drop-shadow(0 0 2px #0b7458);
 }
 
+.btn-menu {
+  background-image: url("../img/burger.png");
+}
+
+.btn-call {
+  background-image: url("../img/call.png");
+}
+
+.btn-chat {
+  background-image: url("../img/chat.png");
+}
+
+.btn-profile {
+  background-image: url("../img/profile.png");
+}
+
+.btn-repair {
+  background-image: url("../img/repair.png");
+}
+
+.btn-checkstatus {
+  background-image: url("../img/checkstatus.png");
+}
+
 .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -208,40 +234,8 @@ body {
           align-items: center;
 }
 
-.menu__button::before {
-  content: "";
-  display: inline-block;
-  width: 18px;
-  height: 16px;
-  background: url("../img/burger.png") no-repeat center center;
-}
-
-.connection__button {
+.connection button {
   margin-right: 16px;
-}
-
-.connection__button:first-child::before {
-  content: "";
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  background: url("../img/call.png") no-repeat center center;
-}
-
-.connection__button:nth-child(2)::before {
-  content: "";
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background: url("../img/chat.png") no-repeat center center;
-}
-
-.connection__button:last-child::before {
-  content: "";
-  display: inline-block;
-  width: 20px;
-  height: 18px;
-  background: url("../img/profile.png") no-repeat center center;
 }
 
 .handling {
@@ -269,24 +263,8 @@ body {
   border-radius: 1px;
 }
 
-.handling__button {
+.handling button {
   margin-left: 16px;
-}
-
-.handling__button:first-of-type::before {
-  content: "";
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background: url("../img/repair.png") no-repeat center center;
-}
-
-.handling__button:last-of-type::before {
-  content: "";
-  display: inline-block;
-  width: 16px;
-  height: 20px;
-  background: url("../img/checkstatus.png") no-repeat center center;
 }
 
 .services__header {

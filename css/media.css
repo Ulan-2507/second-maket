@@ -1,0 +1,101 @@
+@media only screen and (max-width: 320px) {
+  .service-content::after {
+    margin: 16px -16px 0;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  .service-content::after {
+    width: 360px;
+    height: 208px;
+    background: url("../img/bg-768.jpg") no-repeat center center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+  .header::before {
+    left: 107px;
+  }
+  .menu::after {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 32px;
+    margin-left: 20px;
+    vertical-align: middle;
+    background-color: #EAEAEA;
+    border-radius: 1px;
+  }
+  .connection[hidden] {
+    display: block;
+  }
+  .services__title::before {
+    margin-left: -24px;
+  }
+  .services-nav__wrapper {
+    margin-bottom: 32px;
+  }
+  .service-content {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .service-content__wrapper {
+    width: 50%;
+  }
+  .service-content__text {
+    max-height: 160px;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+  .service-content::after {
+    margin: 0 0 0 24px;
+    border-radius: 6px;
+  }
+}
+
+@media only screen and (min-width: 1120px) {
+  .container {
+    max-width: 1120px;
+    padding: 0 32px;
+  }
+  .header {
+    display: none;
+  }
+  .handling[hidden] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .handling::before {
+    display: none;
+  }
+  .handling__btn-label {
+    margin: 0 9px 0 32px;
+  }
+  .services__title {
+    margin-top: 42px;
+  }
+  .services__title::before {
+    margin-left: -32px;
+  }
+  .services-nav__wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .services-nav__link[hidden] {
+    display: block;
+  }
+  .service-content::after {
+    width: 531px;
+    height: 307px;
+    margin: 0 30px 0 0;
+    border-radius: 6px;
+    background: url("../img/bg-1120.jpg") no-repeat center center;
+  }
+}
