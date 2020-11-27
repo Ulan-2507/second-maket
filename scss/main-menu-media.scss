@@ -1,0 +1,29 @@
+@media only screen and (min-width: 360px) {
+    .main-menu {
+        width: 360px;
+        left: -360px;
+        &__container {
+            padding: 0 24px
+        }
+    }
+
+    .active {
+
+        &::before {
+            margin-left: -24px;       
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .main-menu {
+        width: 320px;
+        left: -320px;
+        box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2);
+
+        &__container {
+            padding: 0 24px
+        }
+    }
+
+}

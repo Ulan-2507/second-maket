@@ -71,6 +71,13 @@ img{width: 100%;}
 
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
 /*--------------------*/
 body {
     font-family: 'TT Lakes';
@@ -98,6 +105,7 @@ body {
 /* Container
 ===================*/
 .container {
+    position: relative;
     min-width: 320px;
     padding: 0 16px;
 }
@@ -142,14 +150,14 @@ body {
     background-position: center center;
 }
 .btn:hover {
-    background-color: #cc0f48;
+    filter: drop-shadow(0 0 3px #0b7458);
     transition: 0.2s linear;
 }
 .btn:active {
-    box-shadow: inset 0 0 15px #B8FFEC;
+    box-shadow: inset 0 0 15px #da454c;
 }
 .btn:focus {
-    filter: drop-shadow(0 0 2px #0b7458);
+    filter: drop-shadow(0 0 3px #0b7458);
 }
 .btn-menu {
     background-image: url("../img/burger.png");
@@ -169,6 +177,7 @@ body {
 .btn-checkstatus {
     background-image: url("../img/checkstatus.png");
 }
+
 
 .menu {
     display: flex;
@@ -344,6 +353,9 @@ body {
     }
 }
 
+
+@import "main-menu-style.scss";
+@import "main-menu-media.scss";
 @import "media.scss";
 
 
