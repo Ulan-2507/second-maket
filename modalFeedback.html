@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <title>Feedback</title>
+</head>
+<body>
+    <section class="modal-window window-open">
+        <div class="container modal-window__container">
+            <button aria-label="Закрыть модальное окно" class="btn-chat close btn " type="button" tabindex="0">Закрыть модальное окно</button>
+
+            <h2 class="title modal-window__title  selected">Обратная связь</h2>
+
+            <form class="modal-window__form" action="#" method="POST" role="feedback">
+                <input class="modal-window__input" type="text" placeholder="Имя">
+                <input class="modal-window__input" type="tel" placeholder="Телефон">
+                <input class="modal-window__input" type="mail" placeholder="Электронная почта">
+                <textarea class="modal-window__input" rows="4" placeholder="Сообщение"></textarea>
+                <p class="modal-window__warning-text">
+                    Нажимая “отправить”, вы даете согласие на <span>обработку персональных данных</span> и соглашаетесь с нашей <span>политикой конфиденциальности</span>
+                </p>
+                <div class="modal-window__btn-wrapper">
+                    <button aria-label="ОТПРАВИТЬ" class="btn-dropdown" type="submit">ОТПРАВИТЬ</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

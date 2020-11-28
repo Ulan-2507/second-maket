@@ -3,14 +3,13 @@
         width: 360px;
         left: -360px;
         &__container {
-            padding: 0 24px
+            padding: 0 24px !important; 
         }
-
-        &__link_active {
+    }
+    .selected {
             
-            &::before { 
-                margin-left: -24px;       
-            }
+        &::before { 
+            margin-left: -24px;       
         }
     }
 }
@@ -20,10 +19,38 @@
         width: 320px;
         left: -320px;
         box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2);
+    }
+}
 
-        &__container {
-            padding: 0 24px
-        }
+@media only screen and (min-width: 1120px) {
+    .main-menu {
+        width: 320px;
+        left: 0;
+        box-shadow: none;
+
+        &__header {
+            min-height: 113px;
+            flex-direction: row-reverse;
+            align-items: center;
+            
+            &::before {
+                content: "";
+                position: absolute;
+                height: 50.814815521240234px;
+                width: 96.54814910888672px;
+                left: 0px;
+                top: 30px;
+                background: url("../img/logo.png") no-repeat 0 0;
+            }
+        }    
+        
+    }
+    
+    .btn-menu {
+        display: none;
     }
 
+    .show-search-form {
+        height: 107px;
+    }
 }

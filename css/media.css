@@ -4,7 +4,13 @@
   }
 }
 
-@media only screen and (min-width: 375px) {
+@media only screen and (min-width: 360px) {
+  .container {
+    padding: 0 24px;
+  }
+  .services__title::before {
+    margin-left: -24px;
+  }
   .service-content::after {
     width: 360px;
     height: 208px;
@@ -13,9 +19,6 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .container {
-    padding: 0 24px;
-  }
   .header::before {
     left: 107px;
   }
@@ -31,9 +34,6 @@
   }
   .connection[hidden] {
     display: block;
-  }
-  .services__title::before {
-    margin-left: -24px;
   }
   .services-nav__wrapper {
     margin-bottom: 32px;
@@ -60,6 +60,9 @@
 }
 
 @media only screen and (min-width: 1120px) {
+  .wrapper > .container {
+    margin-left: 320px;
+  }
   .container {
     max-width: 1120px;
     padding: 0 32px;
@@ -71,6 +74,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding-top: 10px;
   }
   .handling::before {
     display: none;

@@ -1,0 +1,6 @@
+@media only screen and (min-width: 768px) {
+  .modal-window {
+    -webkit-box-shadow: -16px 0px 52px rgba(14, 24, 80, 0.2);
+            box-shadow: -16px 0px 52px rgba(14, 24, 80, 0.2);
+  }
+}
