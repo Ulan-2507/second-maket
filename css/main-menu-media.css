@@ -6,7 +6,7 @@
   .main-menu__container {
     padding: 0 24px;
   }
-  .active::before {
+  .main-menu__link_active::before {
     margin-left: -24px;
   }
 }

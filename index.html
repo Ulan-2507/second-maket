@@ -9,28 +9,21 @@
   <body>
     <header class="header">
       <div class="container">
-
         <div class="header__menu">
-
           <div class="menu">
             <button aria-label="Меню" class="btn-menu btn" type="button">Меню</button>
           </div>
-          
           <div class="header__connection">
-            
             <div class="connection" hidden>
               <button aria-label="Заказать звонок" class="btn-call btn" type="button">Заказать звонок</button>
               <button aria-label="Обратная связь" class="btn-chat btn" type="button">Обратная связь</button>
               <button aria-label="Профиль" class="btn-profile btn" type="button">Профиль</button>
             </div>
-
             <div class="handling">
               <button aria-label="Оставить заявку" class="btn-repair btn" type="button">Оставить заявку</button>
               <button aria-label="Статус ремонта" class="btn-checkstatus btn" type="button">Статус ремонта</button>
             </div>
-
           </div><!--/.header__connection-->
-
         </div><!--/.header__menu-->
       </div><!--/.container--> 
     </header>
@@ -38,23 +31,21 @@
     <div class="container">
       <section class="main-menu ">
         <div class="main-menu__container container">
-
           <header class="main-menu__header">
-              <button aria-label="Закрыть меню" class="btn-menu btn-menu-close btn " type="button">Закрыть меню</button>
+              <button aria-label="Закрыть меню" class="btn-menu close btn " type="button" tabindex="0">Закрыть меню</button>
 
               <div class="main-menu__search ">
                   <form class="main-menu__form visually-hidden" action="#" method="GET" role="search">
                       <label for="search" class="visually-hidden">Поиск</label>
                       <input class="main-menu__input" type="search" id="search" placeholder="Поиск">
                   </form>
+
                   <button aria-label="Поиск" class="btn-search  btn" type="button"></button>
               </div>
           </header>
-
-      
           <nav class="main-menu__nav">
               <ul>
-                  <li><a href="#" class="main-menu__link active">Ремонт техники</a></li>
+                  <li><a href="#" class="main-menu__link main-menu__link_active">Ремонт техники</a></li>
                   <li><a href="#" class="main-menu__link">Услуги и сервисы</a></li>
                   <li><a href="#" class="main-menu__link">Корпоративным клиентам</a></li>
                   <li><a href="#" class="main-menu__link">Продавцам техники</a></li>
@@ -64,33 +55,26 @@
                   <li><a href="#" class="main-menu__link">Контакты</a></li>
               </ul>
           </nav>
-
           <footer class="main-menu__footer">
               <div class="connection" hidden>
                   <button aria-label="Заказать звонок" class="btn-call btn" type="button">Заказать звонок</button>
                   <button aria-label="Обратная связь" class="btn-chat btn" type="button">Обратная связь</button>
                   <button aria-label="Профиль" class="btn-profile btn" type="button">Профиль</button>
               </div>
-
+              
               <a class="mail-cps" href="mailto:mail@cps.com">mail@cps.com</a>
-              <a class="tel-cps" href="tel:+8 800 890 8900">8 800 890 8900</a>
+              <a class="tel-cps" href="tel:+8 800 890 8900">8 800 890 8900</a>           
 
               <div class="lang">
                   <a href="#" class="lang__link active-lang">RU</a>
                   <a href="#" class="lang__link">EN</a>
                   <a href="#" class="lang__link">CH</a>
               </div> 
-          </footer>
-            
+          </footer>  
         </div> <!--/.container--> 
-
       </section><!--/.main-menu-->
-    </div>
-    
 
-    <div class="container">
       <section class="services">
-        
         <div class="services__header">
           <h1 class="services__title title">Услуги и сервисы</h1>
           <div class="handling" hidden>
@@ -100,9 +84,7 @@
             <label for="checkstatus" class="handling__btn-label">Статус ремонта</label>
             <button id="checkstatus" aria-label="Статус ремонта" class="btn-checkstatus btn" type="button">Статус ремонта</button>
           </div>
-        </div>
-        
-        
+        </div>   
         <nav class="services-nav">
           <ul class="services-nav__wrapper">
             <li><a href="#" class="services-nav__link">Ремонтируемые бренды</a></li>
@@ -113,24 +95,20 @@
             <li><a href="#" class="services-nav__link " hidden>Отзывы</a></li>
           </ul>      
         </nav>
-
         <div class="service-content">
           <div class="service-content__wrapper">
             <input type="checkbox" class="service-content__read-more-checkbox visually-hidden" id="read-more-checkbox">
 
             <div class="service-content__text">
               <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
-              
               <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
             </div><!--/.service-content__text -->
 
             <label for="read-more-checkbox" class="service-content__read-more-label" ></label>
           </div>
-            
         </div><!--/.service__content -->                            
-      
       </section><!--/.services -->
-    </div>
+    </div><!--/.container -->
     <script src="js/main-menu.js"></script>
   </body>
 </html>

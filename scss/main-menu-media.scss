@@ -5,12 +5,12 @@
         &__container {
             padding: 0 24px
         }
-    }
 
-    .active {
-
-        &::before {
-            margin-left: -24px;       
+        &__link_active {
+            
+            &::before { 
+                margin-left: -24px;       
+            }
         }
     }
 }

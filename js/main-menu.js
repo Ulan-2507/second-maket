@@ -3,10 +3,10 @@ let links = document.querySelectorAll('.main-menu__link');
 for (let link of links) {
     link.onclick = function () {
         for (let activeLink of links) {
-            if (activeLink.classList.contains('active')) {
-                activeLink.classList.remove('active');
+            if (activeLink.classList.contains('main-menu__link_active')) {
+                activeLink.classList.remove('main-menu__link_active');
             }
-            link.classList.add('active');
+            link.classList.add('main-menu__link_active');
         }
     }
 }
