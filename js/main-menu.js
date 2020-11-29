@@ -24,14 +24,25 @@ activeToggle(ServiceNavLinks, 'services-nav__link_active');
 let btnsMenu = document.querySelectorAll('.btn-menu');
 let mainMenuActive = document.querySelector('.main-menu');
 let btnsChant = document.querySelectorAll('.btn-chat');
-let modalFeedbackActive = document.querySelector('.modal-window');
+let btnsCall = document.querySelectorAll('.btn-call');
+let modalWindows = document.querySelectorAll('.modal-window');
+let modalWindowFeedback = document.querySelector('.feedback');
+let modalWindowCallback = document.querySelector('.callback');
 
 function menuToggle(btns, window) {
     for (let btn of btns) {
         btn.onclick = function() {
-            modalFeedbackActive.classList.remove('modal-window-open');
+            for (let modalWindow of modalWindows) {
+                modalWindow.classList.remove('modal-window-open');
+            }
+            
+            window.classList.toggle('hidden');
             window.classList.toggle('menu-open');
-            document.querySelectorAll('.modal-window__input').setAttribute('autofocus', 'autofocus');
+            if (window.classList.contains('menu-open')) {
+                window.classList.remove('hidden');
+            }
+            
+
         }
     } 
 }
@@ -40,12 +51,27 @@ function modalWindowToggle(btns, window) {
         btn.onclick = function() {
             mainMenuActive.classList.remove('menu-open');
             window.classList.toggle('modal-window-open');
+
+            if (window.classList.contains('modal-window-open')) {
+                
+                if (window.classList.contains('feedback')) {
+                    modalWindowCallback.classList.remove('modal-window-open');
+                    window.classList.add('hidden');
+                }
+                else {
+                    modalWindowFeedback.classList.remove('modal-window-open');
+                    window.classList.add('hidden');
+                }
+            }
+            window.classList.toggle('hidden');
+            
         }
     } 
 }
 
 menuToggle(btnsMenu, mainMenuActive);
-modalWindowToggle(btnsChant, modalFeedbackActive);
+modalWindowToggle(btnsChant, modalWindowFeedback);
+modalWindowToggle(btnsCall, modalWindowCallback);
 
 
 let mainMenuSearch = document.querySelector('.main-menu__search');

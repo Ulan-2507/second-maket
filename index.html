@@ -30,7 +30,7 @@
         </div><!--/.container--> 
       </header>
       
-      <section class="main-menu ">
+      <section class="main-menu hidden">
         <div class="main-menu__container container">
           <header class="main-menu__header">
               <button aria-label="Закрыть меню" class="btn-menu close btn " type="button" tabindex="0">Закрыть меню</button>
@@ -74,7 +74,7 @@
           </footer>  
         </div> <!--/.container--> 
       </section><!--/.main-menu-->
-      <section class="modal-window">
+      <section class="modal-window feedback hidden">
         <div class="container modal-window__container">
             <button aria-label="Закрыть модальное окно" class="btn-chat close btn " type="button" tabindex="0">Закрыть модальное окно</button>
 
@@ -86,7 +86,24 @@
                 <input class="modal-window__input" type="mail" placeholder="Электронная почта">
                 <textarea class="modal-window__input" rows="4" placeholder="Сообщение"></textarea>
                 <p class="modal-window__warning-text">
-                    Нажимая “отправить”, вы даете согласие на <span>обработку персональных данных</span> и соглашаетесь с нашей <span>политикой конфиденциальности</span>
+                  Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей <a href="#">политикой конфиденциальности</a>
+              </p>
+                <div class="modal-window__btn-wrapper">
+                    <button aria-label="ОТПРАВИТЬ" class="btn-dropdown" type="submit">ОТПРАВИТЬ</button>
+                </div>
+            </form>
+        </div>
+      </section><!--/.modal-window-->
+      <section class="modal-window callback hidden">
+        <div class="container modal-window__container">
+            <button aria-label="Закрыть модальное окно" class="btn-call close btn " type="button" tabindex="0">Закрыть модальное окно</button>
+
+            <h2 class="title modal-window__title  selected">Заказать звонок</h2>
+
+            <form class="modal-window__form" action="#" method="POST" role="feedback">
+                <input class="modal-window__input" type="tel" placeholder="Телефон">
+                <p class="modal-window__warning-text">
+                    Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей <a href="#">политикой конфиденциальности</a>
                 </p>
                 <div class="modal-window__btn-wrapper">
                     <button aria-label="ОТПРАВИТЬ" class="btn-dropdown" type="submit">ОТПРАВИТЬ</button>

@@ -1,11 +1,12 @@
 .modal-window {
+    
     position: absolute;
     top: 0;
-    right: -320px;
-    width: 320px;
+    right: -100vw;
+    width: 100vw;
     height: 100vmax;
     background-color: white;
-    transition: transform 0.5s ease-in;
+    transition: all 0.5s ease-in;
     z-index: 11;
 
     &__container {
@@ -37,7 +38,7 @@
         font-size: 14px;
         line-height: 16px;
         color: #7E7E82;
-        & > span {
+        & > a {
             color: #FF3E79;
         }
     }
@@ -48,7 +49,7 @@
     }
 }
 .modal-window-open {
-    transform: translateX(-320px);
+    transform: translateX(-100vw);
 }
 .btn-dropdown {
     height: 32px;
@@ -81,6 +82,9 @@
         right: -440px;
         box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
     }
+    .modal-window-open {
+        transform: translateX(-440px);
+    }
 }
 @media only screen and (min-width: 1120px) {
 
@@ -89,9 +93,9 @@
         &__container {
             position: relative;
             margin-top: 0;
-            padding: 0 24px !important;
+            
         }
-        &__container > .btn-chat {
+        &__container > .btn {
             position: absolute;
             top: -8px;
             left: -65px;
@@ -100,6 +104,5 @@
     .modal-window-open {
         transform: translateX(-550px);
     }
-    
     
 }

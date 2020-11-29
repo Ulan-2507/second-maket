@@ -1,7 +1,7 @@
 @media only screen and (min-width: 360px) {
     .main-menu {
-        width: 360px;
-        left: -360px;
+        // width: 360px;
+        // left: -360px;
         &__container {
             padding: 0 24px !important; 
         }
@@ -24,7 +24,7 @@
 
 @media only screen and (min-width: 1120px) {
     .main-menu {
-        width: 320px;
+        
         left: 0;
         box-shadow: none;
 

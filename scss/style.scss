@@ -94,8 +94,12 @@ body {
 	position: absolute;
     width: 1px;
     height: 1px;
-    overflow: hidden;
+    overflow-x: hidden;
+    
     clip-path: circle(0);
+}
+.hidden {
+    visibility: hidden;
 }
 [hidden] {
     display: none;
