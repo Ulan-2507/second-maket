@@ -75,6 +75,21 @@
             
         }
     }
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        &__item {
+            width: 33.333%; 
+            margin-bottom: 24px;
+            &:first-child {
+                text-align: left;
+            }
+            &:last-child {
+                text-align: right;
+            }
+        }
+
+    }
 }
 
 @media only screen and (min-width: 1120px){
@@ -84,7 +99,9 @@
     }
     .container {
         max-width: 1120px;
-        
+        & > .container {
+            padding: 0 32px;
+        } 
     }
 
     .header {

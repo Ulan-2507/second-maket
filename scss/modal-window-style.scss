@@ -1,13 +1,12 @@
 .modal-window {
-    
     position: absolute;
     top: 0;
     right: -100vw;
     width: 100vw;
-    height: 100vmax;
+    height: 100%;
     background-color: white;
     transition: all 0.5s ease-in;
-    z-index: 11;
+    z-index: 10;
 
     &__container {
         margin-top: 24px;
@@ -62,7 +61,6 @@
     text-align: center;
     letter-spacing: -0.15px;
     text-transform: uppercase;
-    background: #FF3E79;
     border-radius: 16px;
     &::after {
         display: inline-block;
@@ -70,7 +68,7 @@
         width: 8px;
         height: 10px;
         margin-left: 12px;
-        background-image: url('../img/dropdown.png');
+        background-image: url('../img/dropdown-white.png');
         background-position: center center;
         background-repeat: no-repeat;
     }
@@ -78,6 +76,7 @@
 
 @media only screen and (min-width: 768px) {
     .modal-window {
+        
         width: 440px;
         right: -440px;
         box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
@@ -89,6 +88,7 @@
 @media only screen and (min-width: 1120px) {
 
     .modal-window {
+        
         right: -550px;
         &__container {
             position: relative;

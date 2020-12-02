@@ -94,11 +94,11 @@ body {
 	position: absolute;
     width: 1px;
     height: 1px;
-    overflow-x: hidden;
+    overflow: hidden;
     
     clip-path: circle(0);
 }
-.hidden {
+.visibility-hidden {
     visibility: hidden;
 }
 [hidden] {
@@ -108,9 +108,8 @@ body {
 .wrapper {
     min-width: 320px;
     max-width: 1440px;
-    height: 100vmax;
     margin: 0 auto;
-    overflow: hidden;
+    overflow-x: hidden;
     position: relative;
 }
 /* Container
@@ -273,7 +272,6 @@ body {
     &__wrapper {
         display: flex;
         flex-wrap: nowrap;
-        overflow: auto;
         margin-bottom: 24px;
         
         & > li {
@@ -349,7 +347,7 @@ body {
         filter: drop-shadow(0 0 1px #00bfff);
     }
     &__read-more-checkbox:checked + &__text {
-        max-height: none;
+        max-height: auto;
         margin-bottom: 0;
     }
     &__read-more-checkbox:checked ~ &__read-more-label::before {
@@ -359,10 +357,24 @@ body {
         content: "Свернуть";
     }
 }
-
+.footer {
+    padding-top: 16px;
+    &__item {
+        margin-bottom: 16px;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        color: #7E7E82;
+        opacity: 0.72;
+        & a {
+            color: #7E7E82;
+        }
+    }
+}
 
 @import "main-menu-style.scss";
 @import "modal-window-style.scss";
+@import "swiper.scss";
 @import "media.scss";
 
 

@@ -1,3 +1,35 @@
+let mySwiper = undefined;
+function initSwiper() {
+    let screenWidth = innerWidth;
+    if(screenWidth < 768 && mySwiper == undefined) {            
+        mySwiper = new Swiper('.swiper-container', {            
+            spaceBetween: 16,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            slidesPerView: 1,
+        });
+    } else if (screenWidth >= 768 && mySwiper != undefined) {
+        mySwiper.destroy(true, true);
+        mySwiper = undefined;
+        let swiperWrappers = document.querySelectorAll('.swiper-wrapper'); 
+        let swiperSlides = document.querySelectorAll('.swiper-slide');
+        for (let wrapper of swiperWrappers) {
+            wrapper.removeAttr('style');
+        }
+        for (let slide of swiperSlides) {
+            slide.removeAttr('style'); 
+        }               
+    }        
+}
+
+initSwiper();
+
+window.addEventListener('resize', function(){
+    initSwiper();        
+});
+
+
 let mainMenulinks = document.querySelectorAll('.main-menu__link');
 let langs = document.querySelectorAll('.lang__link');
 let ServiceNavLinks = document.querySelectorAll('.services-nav__link');
@@ -36,10 +68,10 @@ function menuToggle(btns, window) {
                 modalWindow.classList.remove('modal-window-open');
             }
             
-            window.classList.toggle('hidden');
+            window.classList.toggle('visibility-hidden');
             window.classList.toggle('menu-open');
             if (window.classList.contains('menu-open')) {
-                window.classList.remove('hidden');
+                window.classList.remove('visibility-hidden');
             }
             
 
@@ -56,14 +88,14 @@ function modalWindowToggle(btns, window) {
                 
                 if (window.classList.contains('feedback')) {
                     modalWindowCallback.classList.remove('modal-window-open');
-                    window.classList.add('hidden');
+                    window.classList.add('visibility-hidden');
                 }
                 else {
                     modalWindowFeedback.classList.remove('modal-window-open');
-                    window.classList.add('hidden');
+                    window.classList.add('visibility-hidden');
                 }
             }
-            window.classList.toggle('hidden');
+            window.classList.toggle('visibility-hidden');
             
         }
     } 

@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CPS</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <div class="wrapper">
@@ -30,7 +31,7 @@
         </div><!--/.container--> 
       </header>
       
-      <section class="main-menu hidden">
+      <section class="main-menu visibility-hidden">
         <div class="main-menu__container container">
           <header class="main-menu__header">
               <button aria-label="Закрыть меню" class="btn-menu close btn " type="button" tabindex="0">Закрыть меню</button>
@@ -74,7 +75,7 @@
           </footer>  
         </div> <!--/.container--> 
       </section><!--/.main-menu-->
-      <section class="modal-window feedback hidden">
+      <section class="modal-window feedback visibility-hidden">
         <div class="container modal-window__container">
             <button aria-label="Закрыть модальное окно" class="btn-chat close btn " type="button" tabindex="0">Закрыть модальное окно</button>
 
@@ -89,12 +90,12 @@
                   Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей <a href="#">политикой конфиденциальности</a>
               </p>
                 <div class="modal-window__btn-wrapper">
-                    <button aria-label="ОТПРАВИТЬ" class="btn-dropdown" type="submit">ОТПРАВИТЬ</button>
+                    <button aria-label="ОТПРАВИТЬ" class="btn btn-dropdown" type="submit">ОТПРАВИТЬ</button>
                 </div>
             </form>
         </div>
       </section><!--/.modal-window-->
-      <section class="modal-window callback hidden">
+      <section class="modal-window callback visibility-hidden">
         <div class="container modal-window__container">
             <button aria-label="Закрыть модальное окно" class="btn-call close btn " type="button" tabindex="0">Закрыть модальное окно</button>
 
@@ -106,7 +107,7 @@
                     Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей <a href="#">политикой конфиденциальности</a>
                 </p>
                 <div class="modal-window__btn-wrapper">
-                    <button aria-label="ОТПРАВИТЬ" class="btn-dropdown" type="submit">ОТПРАВИТЬ</button>
+                    <button aria-label="ОТПРАВИТЬ" class="btn btn-dropdown" type="submit">ОТПРАВИТЬ</button>
                 </div>
             </form>
         </div>
@@ -147,10 +148,196 @@
             </div>
           </div><!--/.service__content -->                            
         </section><!--/.services -->
+
+        <section class="repaired-devices">
+          <article class="brand-of-tech">
+            <h3 class="link-slider-title">Ремонт техники различных брендов</h3>
+            <input type="checkbox" class="show-more-checkbox visually-hidden" id="show-more-brands"> 
+  
+            <div class="link-slider swiper-container brands-container">
+
+              <div class="link-slider__wrapper swiper-wrapper">
+
+                <div class="link-slider__slide swiper-slide brand">
+                  <a href="#" class="link-slider__link brand">
+                      <img src="img/lenovo.png" alt="lenovo">
+                  </a>
+                </div>
+                <div class="link-slider__slide swiper-slide brand">
+                  <a href="#" class="link-slider__link brand">
+                      <img src="img/samsung.png" alt="samsung">
+                  </a>
+                </div>
+                <div class="link-slider__slide swiper-slide brand">
+                  <a href="#" class="link-slider__link brand">
+                      <img src="img/apple.png" alt="apple">
+                  </a>
+                </div>
+                <div class="link-slider__slide swiper-slide brand">
+                  <a href="#" class="link-slider__link brand">
+                      <img src="img/viewsonic.png" alt="viewsonic">
+                  </a>
+                </div>
+                <div class="link-slider__slide swiper-slide brand">
+                  <a href="#" class="link-slider__link brand">
+                      <img src="img/bosch.png" alt="bosch">
+                  </a>
+                </div>
+                <div class="link-slider__slide swiper-slide brand">
+                  <a href="#" class="link-slider__link brand">
+                      <img src="img/hp.png" alt="hp">
+                  </a>
+                </div>
+                <div class="link-slider__slide swiper-slide brand">
+                  <a href="#" class="link-slider__link brand">
+                      <img src="img/acer.png" alt="acer">
+                  </a>
+                </div>
+                <div class="link-slider__slide swiper-slide brand">
+                  <a href="#" class="link-slider__link brand">
+                      <img src="img/sony.png" alt="sony">
+                  </a>
+                </div>
+                <div class="link-slider__slide swiper-slide brand">
+                  <a href="#" class="link-slider__link brand">
+                      <img src="img/lenovo.png" alt="lenovo">
+                  </a>
+                </div>
+                <div class="link-slider__slide swiper-slide brand">
+                  <a href="#" class="link-slider__link brand">
+                      <img src="img/samsung.png" alt="samsung">
+                  </a>
+                </div>
+                <div class="link-slider__slide swiper-slide brand">
+                  <a href="#" class="link-slider__link brand">
+                      <img src="img/apple.png" alt="apple">
+                  </a>
+                </div>
+
+              </div>
+
+              <div class="swiper-pagination"></div>
+            </div>
+
+            <label for="show-more-brands" class="show-more-label" tabindex="0"></label>
+          </article><!--/.brand-of-tech -->
+
+          <article class="type-of-tech">
+            <h3 class="link-slider-title">Ремонт различных видов техники</h3>
+            <input type="checkbox" class="show-more-checkbox visually-hidden" id="show-more-typeTech"> 
+  
+            <div class="link-slider swiper-container types-container">
+
+              <div class="link-slider__wrapper swiper-wrapper">
+                <div class="link-slider__slide swiper-slide type">
+                  <a href="#" class="link-slider__link type">Ремонт ноутбуков</a>
+                </div>
+                <div class="link-slider__slide swiper-slide type">
+                  <a href="#" class="link-slider__link type">Ремонт планшетов</a>
+                </div>
+                <div class="link-slider__slide swiper-slide type">
+                  <a href="#" class="link-slider__link type">Ремонт ПК</a>
+                </div>
+                <div class="link-slider__slide swiper-slide type">
+                  <a href="#" class="link-slider__link type">Ремонт  мониторов</a>
+                </div>
+              </div><!--/.link-slider__wrapper-->
+
+              <div class="swiper-pagination type-pagination"></div>
+            </div>
+
+            <label for="show-more-typeTech" class="show-more-label" tabindex="0"></label>
+          </article><!--/.type-of-tech -->
+
+          <article class="service-prices">
+            <h3 class="link-slider-title">Цены на услуги</h3>
+  
+            <div class="link-slider swiper-container repair-services-container">
+              <div class="card" hidden>
+                <div class="card__type-service card__title">Ремонтные услуги</div>
+                <div class="card__price card__title">Цена</div>
+                <div class="card__duration card__title">Срок</div>
+              </div>
+              <div class="link-slider__wrapper swiper-wrapper repair-services-wrapper">
+                <div class="link-slider__slide swiper-slide repair-services">
+                  <div class="card">
+                    <div class="card__title">Ремонтные услуги</div>
+                    <div class="card__type-service">Диагностика</div>
+                    <div class="card__title">Цена</div>
+                    <div class="card__price">Бесплатно</div>
+                    <div class="card__title">Срок</div>
+                    <div class="card__duration">30 мин</div>
+                    <button class="btn btn-dropdown btn-to-oder" type="button">Заказать</button>
+                  </div>
+                </div>
+                <div class="link-slider__slide swiper-slide repair-services">
+                  <div class="card">
+                    <div class="card__title">Ремонтные услуги</div>
+                    <div class="card__type-service">Замена дисплея</div>
+                    <div class="card__title">Цена</div>
+                    <div class="card__price">1 000 ₽</div>
+                    <div class="card__title">Срок</div>
+                    <div class="card__duration">30-120 мин</div>
+                    <button class="btn btn-dropdown btn-to-oder" type="button">Заказать</button>
+                  </div>
+                </div>
+                <div class="link-slider__slide swiper-slide repair-services">
+                  <div class="card">
+                    <div class="card__title">Ремонтные услуги</div>
+                    <div class="card__type-service">Замена полифонического динамика</div>
+                    <div class="card__title">Цена</div>
+                    <div class="card__price">1 000 ₽</div>
+                    <div class="card__title">Срок</div>
+                    <div class="card__duration">30-120 мин</div>
+                    <button class="btn btn-dropdown btn-to-oder" type="button">Заказать</button>
+                  </div>
+                </div>
+                <div class="link-slider__slide swiper-slide repair-services">
+                  <div class="card">
+                    <div class="card__title">Ремонтные услуги</div>
+                    <div class="card__type-service">Тестирование с выдачей технического заключения</div>
+                    <div class="card__title">Цена</div>
+                    <div class="card__price">1 000 ₽</div>
+                    <div class="card__title">Срок</div>
+                    <div class="card__duration">30-120 мин</div>
+                    <button class="btn btn-dropdown btn-to-oder" type="button">Заказать</button>
+                  </div>
+                </div>
+                <div class="link-slider__slide swiper-slide repair-services">
+                  <div class="card">
+                    <div class="card__title">Ремонтные услуги</div>
+                    <div class="card__type-service">Замена программного обеспечения</div>
+                    <div class="card__title">Цена</div>
+                    <div class="card__price">1 000 ₽</div>
+                    <div class="card__title">Срок</div>
+                    <div class="card__duration">30-120 мин</div>
+                    <button class="btn btn-dropdown btn-to-oder" type="button">Заказать</button>
+                  </div>
+                </div>
+                
+              </div><!--/.link-slider__wrapper-->
+              
+              <div class="swiper-pagination type-pagination repair-services-pagination"></div>
+            </div><!--/.repair-services-container-->
+
+            <div class="container">
+              <p class="service-prices__text">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
+              <a href="#" class="service-prices__link">Получить коммерческое предложение</a>
+            </div>
+          </article><!--/.service-prices -->
+        </section><!--/.repaired-devices -->
+
+        <footer class="footer">
+          <div class="footer__item"><p>© 2019 CPS</p> Разработано командой Apesong </div>
+          <div class="footer__item"><a href="#">Политика конфиденциальности</a></div>
+          <div class="footer__item">Информация, размещенная на данной странице, не является публичной офертой</div>
+        </footer>
       </div><!--/.container -->
       
-    </div>
+        
+    </div><!--/.wrapper -->
     
-    <script src="js/main-menu.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
