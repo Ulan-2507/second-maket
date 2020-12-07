@@ -19,6 +19,9 @@
             }
         }
     }
+    .modal-window__container {
+        padding-top: 24px;
+    }
 }
 
 @media only screen and (min-width: 768px){
@@ -214,6 +217,9 @@
         width: 440px;
         right: -440px;
         box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+        &__container {
+            padding-top: 24px;
+        }
     }
     .modal-window-open {
         transform: translateX(-440px);
