@@ -7,7 +7,7 @@ function initSwiper() {
             pagination: {
                 el: '.swiper-pagination',
             },
-            slidesPerView: 1,
+            slidesPerView: 1.3,
         });
     } else if (screenWidth >= 768 && mySwiper != undefined) {
         mySwiper.destroy(true, true);
@@ -29,11 +29,11 @@ window.addEventListener('resize', function(){
     initSwiper();        
 });
 
-
-let mainMenulinks = document.querySelectorAll('.main-menu__link');
-let langs = document.querySelectorAll('.lang__link');
+let layerBlur = document.querySelector('.layer-blur');
+let mainMenu = document.querySelector('.main-menu');
+let mainMenulinks = mainMenu.querySelectorAll('.main-menu__link');
+let langs = mainMenu.querySelectorAll('.lang__link');
 let ServiceNavLinks = document.querySelectorAll('.services-nav__link');
-
 
 function activeToggle(links, linkActive) {
     for (let link of links) {
@@ -48,13 +48,11 @@ function activeToggle(links, linkActive) {
     }
 }
 
-activeToggle(mainMenulinks, 'selected');
-activeToggle(langs, 'active-lang');
-activeToggle(ServiceNavLinks, 'services-nav__link_active');
-
+activeToggle(mainMenulinks, 'main-menu__nav-link_active');
+activeToggle(langs, 'lang__link_active');
+activeToggle(ServiceNavLinks, 'services__nav-link_active');
 
 let btnsMenu = document.querySelectorAll('.btn-menu');
-let mainMenuActive = document.querySelector('.main-menu');
 let btnsChant = document.querySelectorAll('.btn-chat');
 let btnsCall = document.querySelectorAll('.btn-call');
 let modalWindows = document.querySelectorAll('.modal-window');
@@ -73,7 +71,7 @@ function menuToggle(btns, window) {
             if (window.classList.contains('menu-open')) {
                 window.classList.remove('visibility-hidden');
             }
-            
+            layerBlur.classList.toggle('layer-blur_active');
 
         }
     } 
@@ -81,7 +79,7 @@ function menuToggle(btns, window) {
 function modalWindowToggle(btns, window) {
     for (let btn of btns) {
         btn.onclick = function() {
-            mainMenuActive.classList.remove('menu-open');
+            mainMenu.classList.remove('menu-open');
             window.classList.toggle('modal-window-open');
 
             if (window.classList.contains('modal-window-open')) {
@@ -96,24 +94,32 @@ function modalWindowToggle(btns, window) {
                 }
             }
             window.classList.toggle('visibility-hidden');
+            layerBlur.classList.toggle('layer-blur_active');
             
         }
     } 
 }
-
-menuToggle(btnsMenu, mainMenuActive);
+menuToggle(btnsMenu, mainMenu);
 modalWindowToggle(btnsChant, modalWindowFeedback);
 modalWindowToggle(btnsCall, modalWindowCallback);
 
-
-let mainMenuSearch = document.querySelector('.main-menu__search');
-let mainMenuForm = document.querySelector('.main-menu__form');
-let btnSearch = document.querySelector('.btn-search');
+let mainMenuSearch = mainMenu.querySelector('.main-menu__search');
+let mainMenuForm = mainMenu.querySelector('.main-menu__form');
+let btnSearch = mainMenu.querySelector('.btn-search');
 
 btnSearch.onclick = function () {
     mainMenuSearch.classList.toggle('show-search-form');
     mainMenuForm.classList.toggle('visually-hidden');
-    btnSearch.classList.toggle('btn-search-close');
+    btnSearch.classList.toggle('btn-close');
 }
 
 
+layerBlur.addEventListener('click', function () {
+    mainMenu.classList.remove('menu-open');
+    mainMenu.classList.add('visibility-hidden');
+    modalWindowCallback.classList.remove('modal-window-open');
+    modalWindowCallback.classList.add('visibility-hidden');
+    modalWindowFeedback.classList.remove('modal-window-open');
+    modalWindowFeedback.classList.add('visibility-hidden');
+    layerBlur.classList.toggle('layer-blur_active');
+});

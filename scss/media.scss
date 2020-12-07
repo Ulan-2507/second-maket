@@ -1,39 +1,33 @@
-@media only screen and (max-width: 320px){
-    .service-content {
-        &::after {
-            margin: 16px -16px 0;
-        }
-    }
-}
 @media only screen and (min-width: 360px){
-
-    .container {
-        padding: 0 24px;
-    }
-    .services {
-        &__title {
-            &::before { 
-                margin-left: -24px;       
+    .main-menu {
+        &__container {
+            padding: 0 24px;
+        }
+        &__nav-link {
+			&_active {
+                &::before {
+                    margin-left: -24px; 
+                }
             }
         }
     }
-    .service-content {
-        &::after {
-            width: 360px;
-            height: 208px;
-            background: url("../img/bg-768.jpg") no-repeat center center;
+    .services {
+        &__content {
+            &::after {
+                content: "";
+                margin: 0 auto;
+            }
         }
     }
 }
 
 @media only screen and (min-width: 768px){
-    
-    .header {
-        &::before{
-            left: 107px; 
-        }
+    .container {
+        padding: 0 24px;
     }
-
+    .header__logo {
+        left: 107px;
+    }
     .menu {
         &::after {
             content: "";
@@ -46,41 +40,148 @@
             border-radius: 1px; 
         }
     }
-
     .connection[hidden] {
-        display: block;
+        display: flex;
     }
-
     
-    .services-nav {
-		&__wrapper {
-            margin-bottom: 32px;
-		}
-    }
-
-    .service-content {
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        &__wrapper {
-            width: 50%;
+    .title {
+        &::before {
+            margin-left: -24px;       
+            
         }
-        &__text {
+    }
+    .services {
+        &__title {
+            margin-bottom: 32px;
+        }
+        &__nav {
+            margin-bottom: 32px;
+        }
+        &__content {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            &::after {
+                margin: 0;                
+                width: 360px;
+                height: 208px;
+                border-radius: 6px;
+                background-image: url("../img/bg-768.jpg");
+            }
+        }
+        &__content-text-wrapper {
+            padding-right: 36px;
+            width: 50%;
+		}
+
+		&__content-text {
             max-height: 160px;
             line-height: 20px;
             margin-bottom: 10px;
         }
+    }
+
+    .brands-container,
+    .types-container {
+        height: 264px;
+        margin: 0 -24px;
+    }
+    .swiper-container.fade-copy {
         &::after {
-            margin: 0 0 0 24px;
-            border-radius: 6px;
-            
+            display: none; 
+        }
+    }
+    .swiper-wrapper {
+        flex-wrap: wrap;
+        margin: 0 auto;
+        height: 184px;
+        overflow: hidden;
+        padding-top: 24px;
+    }
+    .swiper-slide {
+        width: 224px !important;
+        margin: 0 0 16px 24px;
+    }    
+    .show-more-label {
+        display: block;
+    }
+    .swiper-pagination {
+        display: none;
+    }
+    .repair-services {
+        height: auto;
+        width: auto !important;
+        margin: 0 !important;
+        border-bottom: 1px solid #EAEAEA;
+        &:last-child {
+            border-bottom: none;
+        }
+        & .card__title {
+            display: none;
+        }
+    }
+    .repair-services-container {
+        height: auto;
+        overflow: auto;
+    
+        & > .card[hidden] {
+            display: flex;
+        }
+        & > .card {
+            background-color: inherit;
+            padding-left: 16px;
+            padding-right: 180px;
+        }
+
+    }
+    .repair-services-wrapper {
+        flex-direction: column;
+        width: auto !important;
+        height: auto !important;
+        padding: 0 16px;
+        background-color: white;
+        border-radius: 6px;
+    }
+
+    .card {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+        padding-right: 160px;
+        border-radius: 0px;
+        height: 64px;
+        &__type-service,
+        &__price,
+        &__duration {
+            margin-bottom: 0;
+        }
+        &__type-service {
+            min-width: 348px;
+        }
+        &__price {
+            min-width: 74px;
+        }
+        &__duration {
+            min-width: 81px;
+        }
+        & .btn-dropdown {
+            right: 0px;  
+        }
+    }
+    .service-prices {
+        &__info {
+            margin-top: 24px;
+            margin-bottom: 47px;
         }
     }
     .footer {
         display: flex;
         justify-content: space-between;
+        padding: 16px 0;
         &__item {
             width: 33.333%; 
-            margin-bottom: 24px;
             &:first-child {
                 text-align: left;
             }
@@ -90,22 +191,45 @@
         }
 
     }
-}
+    .main-menu {
+        width: 320px;
+        left: -320px;
+        box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2);
+        &__body {
+            margin-top: 18px;
+        }
+        &__nav-list {
+            margin-bottom: 268px;
+        }
+    }
+    .contacts {
+        &__tel-cps {
+            margin-bottom: 40px;
+        }
+    }
+    .menu-open {
+        transform: translateX(100%);
+    }  
+    .modal-window {
+        width: 440px;
+        right: -440px;
+        box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+    }
+    .modal-window-open {
+        transform: translateX(-440px);
+    }
 
+}
 @media only screen and (min-width: 1120px){
     .wrapper > .container {
         margin-left: 320px;
+    }
+    .container {   
         padding: 0 32px;
     }
-    .container {
-        max-width: 1120px;
-        
-    }
-
     .header {
         display: none;
     }
-
     .handling {
         &[hidden] {
             display: flex;
@@ -118,35 +242,102 @@
             margin: 0 9px 0 32px;
         }
     }
-
+    .title {
+        &::before {
+            margin-left: -32px;                
+        }
+    }
     .services {
         &__title {
-            margin-top: 42px;
-            &::before { 
-                margin-left: -32px;       
+            margin-bottom: 8px;
+        }
+        &__nav {
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+        &__nav-list {
+            flex-wrap: wrap;
+            overflow-x: auto;
+        }
+        &__content {
+            &::after {
+                width: 531px;
+                height: 307px;
+                background-image: url("../img/bg-1120.jpg");
             }
         }
+		&__content-text {
+            margin-bottom: 14px;
+        }
+    } 
+    .brands-container,
+    .types-container {
+        height: 282px;
+        margin: 0 -32px;
+    }
+    .swiper-slide {
+        width: 240px !important;
+        margin: 0 0 16px 32px;
+    } 
+    .show-more-label {
+        margin: 24px 32px 50px;
+    }   
+    .repair-services {
+        width: auto !important;
+        &:last-child {
+            border-bottom: none;
+        }
+        & .card__title {
+            display: none;
+        }
+    }
+    .fade-copy {
+        &::after {
+            display: none; 
+        }
+       
+    }
+    .btn-menu {
+        display: none;
+    }
+    .modal-window {
+        right: -550px;
+        &__container {
+            position: relative;
+            margin-top: 0;
+            
+        }
+        &__container > .btn {
+            position: absolute;
+            top: -8px;
+            left: -65px;
+        }
+    }
+    .modal-window-open {
+        transform: translateX(-550px);
+    }
+    .main-menu {
+        visibility: visible;
+        left: 0;
+        box-shadow: none;
+        z-index: 0;
+
+        &__header {
+            min-height: 113px;
+            flex-direction: row-reverse;
+            align-items: center;
+            
+            &::before {
+                left: 0px;
+                top: 30px;
+            }
+        }    
         
+    } 
+    .menu-open {
+        transform: translateX(0);
     }
-
-    .services-nav {
-        &__wrapper {
-            flex-wrap: wrap;
-        }
-
-        &__link[hidden] {
-            display: block;
-        }
+    .show-search-form {
+        height: 107px;
     }
-
-    .service-content::after {
-        width: 531px;
-        height: 307px;
-        margin: 0 30px 0 0;
-        border-radius: 6px;
-        background: url("../img/bg-1120.jpg") no-repeat center center;
-    }
-
-    
 }
-   

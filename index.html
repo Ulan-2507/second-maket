@@ -8,21 +8,31 @@
     <link rel="stylesheet" href="css/style.css" rel="preload">
   </head>
   <body>
+    <!-- Sprite -->
+    <svg style="display: none;">
+      <symbol id="dropdown" viewBox="0 0 8 12">
+        <g>
+          <path clip-rule="evenodd" d="M4.5 6L0.707106 2.20711C0.316582 1.81658 0.316582 1.18342 0.707107 0.792893L0.792893 0.707107C1.18342 0.316583 1.81658 0.316583 2.20711 0.707107L6.79289 5.29289C7.18342 5.68342 7.18342 6.31658 6.79289 6.70711L2.20711 11.2929C1.81658 11.6834 1.18342 11.6834 0.792893 11.2929L0.707107 11.2071C0.316583 10.8166 0.316583 10.1834 0.707107 9.79289L4.5 6Z" />
+        </g>
+      </symbol> 
+    </svg>
+
     <div class="wrapper">
 
       <header class="header">
+        <img class="header__logo" src="img/logos/logo.svg" alt="logo CPS">
         <div class="container">
-          <div class="header__menu">
-            <div class="menu">
+          <div class="header__menu flex-item-alignment">
+            <div class="menu flex-item-alignment">
               <button aria-label="Меню" class="btn-menu btn" type="button">Меню</button>
             </div>
-            <div class="header__connection">
+            <div class="header__connection flex-item-alignment">
               <div class="connection" hidden>
                 <button aria-label="Заказать звонок" class="btn-call btn" type="button">Заказать звонок</button>
                 <button aria-label="Обратная связь" class="btn-chat btn" type="button">Обратная связь</button>
                 <button aria-label="Профиль" class="btn-profile btn" type="button">Профиль</button>
               </div>
-              <div class="handling">
+              <div class="handling flex-item-alignment">
                 <button aria-label="Оставить заявку" class="btn-repair btn" type="button">Оставить заявку</button>
                 <button aria-label="Статус ремонта" class="btn-checkstatus btn" type="button">Статус ремонта</button>
               </div>
@@ -31,93 +41,13 @@
         </div><!--/.container--> 
       </header>
       
-      <section class="main-menu visibility-hidden">
-        <div class="main-menu__container container">
-          <header class="main-menu__header">
-              <button aria-label="Закрыть меню" class="btn-menu close btn " type="button" tabindex="0">Закрыть меню</button>
-
-              <div class="main-menu__search ">
-                  <form class="main-menu__form visually-hidden" action="#" method="GET" role="search">
-                      <label for="search" class="visually-hidden">Поиск</label>
-                      <input class="main-menu__input" type="search" id="search" placeholder="Поиск">
-                  </form>
-
-                  <button aria-label="Поиск" class="btn-search  btn" type="button"></button>
-              </div>
-          </header>
-          <nav class="main-menu__nav">
-              <ul>
-                  <li><a href="#" class="main-menu__link selected">Ремонт техники</a></li>
-                  <li><a href="#" class="main-menu__link">Услуги и сервисы</a></li>
-                  <li><a href="#" class="main-menu__link">Корпоративным клиентам</a></li>
-                  <li><a href="#" class="main-menu__link">Продавцам техники</a></li>
-                  <li><a href="#" class="main-menu__link">Партнерам</a></li>
-                  <li><a href="#" class="main-menu__link">Производителям</a></li>
-                  <li><a href="#" class="main-menu__link">Наши сервисные центры</a></li>
-                  <li><a href="#" class="main-menu__link">Контакты</a></li>
-              </ul>
-          </nav>
-          <footer class="main-menu__footer">
-              <div class="connection">
-                  <button aria-label="Заказать звонок" class="btn-call btn" type="button">Заказать звонок</button>
-                  <button aria-label="Обратная связь" class="btn-chat btn" type="button">Обратная связь</button>
-                  <button aria-label="Профиль" class="btn-profile btn" type="button">Профиль</button>
-              </div>
-              
-              <a class="mail-cps" href="mailto:mail@cps.com">mail@cps.com</a>
-              <a class="tel-cps" href="tel:+8 800 890 8900">8 800 890 8900</a>           
-
-              <div class="lang">
-                  <a href="#" class="lang__link active-lang">RU</a>
-                  <a href="#" class="lang__link">EN</a>
-                  <a href="#" class="lang__link">CH</a>
-              </div> 
-          </footer>  
-        </div> <!--/.container--> 
-      </section><!--/.main-menu-->
-      <section class="modal-window feedback visibility-hidden">
-        <div class="container modal-window__container">
-            <button aria-label="Закрыть модальное окно" class="btn-chat close btn " type="button" tabindex="0">Закрыть модальное окно</button>
-
-            <h2 class="title modal-window__title  selected">Обратная связь</h2>
-
-            <form class="modal-window__form" action="#" method="POST" role="feedback">
-                <input class="modal-window__input"  type="text" placeholder="Имя">
-                <input class="modal-window__input" type="tel" placeholder="Телефон">
-                <input class="modal-window__input" type="mail" placeholder="Электронная почта">
-                <textarea class="modal-window__input" rows="4" placeholder="Сообщение"></textarea>
-                <p class="modal-window__warning-text">
-                  Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей <a href="#">политикой конфиденциальности</a>
-              </p>
-                <div class="modal-window__btn-wrapper">
-                    <button aria-label="ОТПРАВИТЬ" class="btn btn-dropdown" type="submit">ОТПРАВИТЬ</button>
-                </div>
-            </form>
-        </div>
-      </section><!--/.modal-window-->
-      <section class="modal-window callback visibility-hidden">
-        <div class="container modal-window__container">
-            <button aria-label="Закрыть модальное окно" class="btn-call close btn " type="button" tabindex="0">Закрыть модальное окно</button>
-
-            <h2 class="title modal-window__title  selected">Заказать звонок</h2>
-
-            <form class="modal-window__form" action="#" method="POST" role="feedback">
-                <input class="modal-window__input" type="tel" placeholder="Телефон">
-                <p class="modal-window__warning-text">
-                    Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей <a href="#">политикой конфиденциальности</a>
-                </p>
-                <div class="modal-window__btn-wrapper">
-                    <button aria-label="ОТПРАВИТЬ" class="btn btn-dropdown" type="submit">ОТПРАВИТЬ</button>
-                </div>
-            </form>
-        </div>
-      </section><!--/.modal-window-->
+     
 
       <div class="container">
         <section class="services">
-          <div class="services__header">
+          <div class="services__header flex-item-alignment">
             <h1 class="services__title title">Услуги и сервисы</h1>
-            <div class="handling" hidden>
+            <div class="handling flex-item-alignment" hidden>
               <label for="repair" class="handling__btn-label">Оставить заявку</label>
               <button id="repair" aria-label="Оставить заявку" class="btn-repair btn" type="button">Оставить заявку</button>
   
@@ -125,141 +55,232 @@
               <button id="checkstatus" aria-label="Статус ремонта" class="btn-checkstatus btn" type="button">Статус ремонта</button>
             </div>
           </div>   
-          <nav class="services-nav">
-            <ul class="services-nav__wrapper">
-              <li><a href="#" class="services-nav__link services-nav__link_active">Ремонтируемые бренды</a></li>
-              <li><a href="#" class="services-nav__link">Ремонтируемые устройства</a></li>
-              <li><a href="#" class="services-nav__link">Цены на услуги</a></li>
-              <li><a href="#" class="services-nav__link">Адреса сервисных центров</a></li>
-              <li><a href="#" class="services-nav__link">Специальные цены</a></li>
-              <li><a href="#" class="services-nav__link " hidden>Отзывы</a></li>
+          <nav class="services__nav fade-copy">
+            <ul class="services__nav-list">
+
+              <li class="services__nav-item">
+                <a href="#" class="services__nav-link services__nav-link_active">Ремонтируемые бренды</a>
+              </li>
+              <li class="services__nav-item">
+                <a href="#" class="services__nav-link">Ремонтируемые устройства</a>
+              </li>
+              <li class="services__nav-item">
+                <a href="#" class="services__nav-link">Цены на услуги</a>
+              </li>
+              <li class="services__nav-item">
+                <a href="#" class="services__nav-link">Адреса сервисных центров</a>
+              </li>
+              <li class="services__nav-item">
+                <a href="#" class="services__nav-link">Специальные цены</a>
+              </li>
+              <li class="services__nav-item">
+                <a href="#" class="services__nav-link">Отзывы</a>
+              </li>
             </ul>      
           </nav>
-          <div class="service-content">
-            <div class="service-content__wrapper">
-              <input type="checkbox" class="service-content__read-more-checkbox visually-hidden" id="read-more-checkbox">
-  
-              <div class="service-content__text">
+          <div class="services__content">
+            <div class="services__content-text-wrapper">
+              <input type="checkbox" class="services__read-more-checkbox visually-hidden" id="read-more-checkbox">
+              <div class="services__content-text">
                 <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
                 <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
-              </div><!--/.service-content__text -->
+              </div>
   
-              <label for="read-more-checkbox" class="service-content__read-more-label" ></label>
+              <label for="read-more-checkbox" class="services__read-more-label" ></label>
             </div>
-          </div><!--/.service__content -->                            
+          </div>                         
         </section><!--/.services -->
 
         <section class="repaired-devices">
           <article class="brand-of-tech">
-            <h3 class="link-slider-title">Ремонт техники различных брендов</h3>
-            <input type="checkbox" class="show-more-checkbox visually-hidden" id="show-more-brands"> 
-  
-            <div class="link-slider swiper-container brands-container">
+            <h3 class="repaired-devices__title">Ремонт техники различных брендов</h3>
+            
+            <div class="swiper-container brands-container fade-copy">
+              <input type="checkbox" class="show-more-checkbox visually-hidden" id="show-more-brands"> 
 
-              <div class="link-slider__wrapper swiper-wrapper">
+              <div class="swiper-wrapper brand-wrapper">
 
-                <div class="link-slider__slide swiper-slide brand">
-                  <a href="#" class="link-slider__link brand">
-                      <img src="img/lenovo.png" alt="lenovo">
+                <div class="swiper-slide  brand">
+                  <a href="#" class="swiper-slide__link  flex-item-alignment brand">
+                    <img src="img/logos//lenovo.svg" alt="lenovo">
+                    <span class="dropdown flex-item-alignment">
+                      <svg class="dropdown__icon">
+                        <use xlink:href="#dropdown"></use>
+                      </svg>
+                    </span>
                   </a>
                 </div>
-                <div class="link-slider__slide swiper-slide brand">
-                  <a href="#" class="link-slider__link brand">
-                      <img src="img/samsung.png" alt="samsung">
+                <div class="swiper-slide brand">
+                  <a href="#" class="swiper-slide__link  flex-item-alignment brand">
+                    <img src="img/logos//samsung.svg" alt="samsung">
+                    <span class="dropdown flex-item-alignment">
+                      <svg class="dropdown__icon">
+                        <use xlink:href="#dropdown"></use>
+                      </svg>
+                    </span>
                   </a>
                 </div>
-                <div class="link-slider__slide swiper-slide brand">
-                  <a href="#" class="link-slider__link brand">
-                      <img src="img/apple.png" alt="apple">
+                <div class="swiper-slide brand">
+                  <a href="#" class="swiper-slide__link  flex-item-alignment brand">
+                    <img src="img/logos//apple.svg" alt="apple">
+                    <span class="dropdown flex-item-alignment">
+                      <svg class="dropdown__icon">
+                        <use xlink:href="#dropdown"></use>
+                      </svg>
+                    </span>
                   </a>
                 </div>
-                <div class="link-slider__slide swiper-slide brand">
-                  <a href="#" class="link-slider__link brand">
-                      <img src="img/viewsonic.png" alt="viewsonic">
+                <div class="swiper-slide brand">
+                  <a href="#" class="swiper-slide__link  flex-item-alignment brand">
+                    <img src="img/logos//viewsonic.svg" alt="viewsonic">
+                    <span class="dropdown flex-item-alignment">
+                      <svg class="dropdown__icon">
+                        <use xlink:href="#dropdown"></use>
+                      </svg>
+                    </span>
                   </a>
                 </div>
-                <div class="link-slider__slide swiper-slide brand">
-                  <a href="#" class="link-slider__link brand">
-                      <img src="img/bosch.png" alt="bosch">
+                <div class="swiper-slide brand">
+                  <a href="#" class="swiper-slide__link  flex-item-alignment brand">
+                    <img src="img/logos//bosch.svg" alt="bosch">
+                    <span class="dropdown flex-item-alignment">
+                      <svg class="dropdown__icon">
+                        <use xlink:href="#dropdown"></use>
+                      </svg>
+                    </span>
                   </a>
                 </div>
-                <div class="link-slider__slide swiper-slide brand">
-                  <a href="#" class="link-slider__link brand">
-                      <img src="img/hp.png" alt="hp">
+                <div class="swiper-slide brand">
+                  <a href="#" class="swiper-slide__link  flex-item-alignment brand">
+                    <img src="img/logos//hp.svg" alt="hp">
+                    <span class="dropdown flex-item-alignment">
+                      <svg class="dropdown__icon">
+                        <use xlink:href="#dropdown"></use>
+                      </svg>
+                    </span>
                   </a>
                 </div>
-                <div class="link-slider__slide swiper-slide brand">
-                  <a href="#" class="link-slider__link brand">
-                      <img src="img/acer.png" alt="acer">
+                <div class="swiper-slide brand">
+                  <a href="#" class="swiper-slide__link  flex-item-alignment brand">
+                    <img src="img/logos//acer.svg" alt="acer">
+                    <span class="dropdown flex-item-alignment">
+                      <svg class="dropdown__icon">
+                        <use xlink:href="#dropdown"></use>
+                      </svg>
+                    </span>
                   </a>
                 </div>
-                <div class="link-slider__slide swiper-slide brand">
-                  <a href="#" class="link-slider__link brand">
-                      <img src="img/sony.png" alt="sony">
+                <div class="swiper-slide brand">
+                  <a href="#" class="swiper-slide__link  flex-item-alignment brand">
+                    <img src="img/logos//sony.svg" alt="sony">
+                    <span class="dropdown flex-item-alignment">
+                      <svg class="dropdown__icon">
+                        <use xlink:href="#dropdown"></use>
+                      </svg>
+                    </span>
                   </a>
                 </div>
-                <div class="link-slider__slide swiper-slide brand">
-                  <a href="#" class="link-slider__link brand">
-                      <img src="img/lenovo.png" alt="lenovo">
+                <div class="swiper-slide brand">
+                  <a href="#" class="swiper-slide__link  flex-item-alignment brand">
+                    <img src="img/logos//lenovo.svg" alt="lenovo">
+                    <span class="dropdown flex-item-alignment">
+                      <svg class="dropdown__icon">
+                        <use xlink:href="#dropdown"></use>
+                      </svg>
+                    </span>
                   </a>
                 </div>
-                <div class="link-slider__slide swiper-slide brand">
-                  <a href="#" class="link-slider__link brand">
-                      <img src="img/samsung.png" alt="samsung">
+                <div class="swiper-slide brand">
+                  <a href="#" class=" swiper-slide__link  flex-item-alignment brand">
+                    <img src="img/logos//samsung.svg" alt="samsung">
+                    <span class="dropdown flex-item-alignment">
+                      <svg class="dropdown__icon">
+                        <use xlink:href="#dropdown"></use>
+                      </svg>
+                    </span>
                   </a>
                 </div>
-                <div class="link-slider__slide swiper-slide brand">
-                  <a href="#" class="link-slider__link brand">
-                      <img src="img/apple.png" alt="apple">
+                <div class="swiper-slide brand">
+                  <a href="#" class=" swiper-slide__link  flex-item-alignment brand">
+                    <img src="img/logos//apple.svg" alt="apple">
+                    <span class="dropdown flex-item-alignment">
+                      <svg class="dropdown__icon">
+                        <use xlink:href="#dropdown"></use>
+                      </svg>
+                    </span>
                   </a>
                 </div>
 
               </div>
 
-              <div class="swiper-pagination"></div>
+              <div class="swiper-pagination brand-pagination"></div>
+              <label for="show-more-brands" class="show-more-label" tabindex="0"></label>
             </div>
 
-            <label for="show-more-brands" class="show-more-label" tabindex="0"></label>
+            
           </article><!--/.brand-of-tech -->
 
           <article class="type-of-tech">
-            <h3 class="link-slider-title">Ремонт различных видов техники</h3>
-            <input type="checkbox" class="show-more-checkbox visually-hidden" id="show-more-typeTech"> 
-  
-            <div class="link-slider swiper-container types-container">
-
-              <div class="link-slider__wrapper swiper-wrapper">
-                <div class="link-slider__slide swiper-slide type">
-                  <a href="#" class="link-slider__link type">Ремонт ноутбуков</a>
+            <h3 class="repaired-devices-title">Ремонт различных видов техники</h3> 
+            <div class=" swiper-container types-container fade-copy">
+              <input type="checkbox" class="show-more-checkbox visually-hidden" id="show-more-typeTech"> 
+              <div class="swiper-wrapper type-wrapper">
+                <div class="swiper-slide type">
+                  <a href="#" class="swiper-slide__link  flex-item-alignment type">Ремонт ноутбуков
+                    <span class="dropdown flex-item-alignment">
+                      <svg class="dropdown__icon">
+                        <use xlink:href="#dropdown"></use>
+                      </svg>
+                    </span>
+                  </a>
                 </div>
-                <div class="link-slider__slide swiper-slide type">
-                  <a href="#" class="link-slider__link type">Ремонт планшетов</a>
+                <div class="swiper-slide type">
+                  <a href="#" class="swiper-slide__link  flex-item-alignment type">Ремонт планшетов
+                    <span class="dropdown flex-item-alignment">
+                      <svg class="dropdown__icon">
+                        <use xlink:href="#dropdown"></use>
+                      </svg>
+                    </span>
+                  </a>
                 </div>
-                <div class="link-slider__slide swiper-slide type">
-                  <a href="#" class="link-slider__link type">Ремонт ПК</a>
+                <div class="swiper-slide type">
+                  <a href="#" class=" swiper-slide__link  flex-item-alignment type">Ремонт ПК
+                    <span class="dropdown flex-item-alignment">
+                      <svg class="dropdown__icon">
+                        <use xlink:href="#dropdown"></use>
+                      </svg>
+                    </span>
+                  </a>
                 </div>
-                <div class="link-slider__slide swiper-slide type">
-                  <a href="#" class="link-slider__link type">Ремонт  мониторов</a>
+                <div class="swiper-slide type">
+                  <a href="#" class=" swiper-slide__link  flex-item-alignment type">Ремонт  мониторов
+                    <span class="dropdown flex-item-alignment">
+                      <svg class="dropdown__icon">
+                        <use xlink:href="#dropdown"></use>
+                      </svg>
+                    </span>
+                  </a>
                 </div>
               </div><!--/.link-slider__wrapper-->
 
               <div class="swiper-pagination type-pagination"></div>
+              <label for="show-more-typeTech" class="show-more-label" tabindex="0"></label>
             </div>
 
-            <label for="show-more-typeTech" class="show-more-label" tabindex="0"></label>
+            
           </article><!--/.type-of-tech -->
 
           <article class="service-prices">
-            <h3 class="link-slider-title">Цены на услуги</h3>
+            <h3 class="repaired-devices-title">Цены на услуги</h3>
   
-            <div class="link-slider swiper-container repair-services-container">
+            <div class=" swiper-container repair-services-container fade-copy">
               <div class="card" hidden>
                 <div class="card__type-service card__title">Ремонтные услуги</div>
                 <div class="card__price card__title">Цена</div>
                 <div class="card__duration card__title">Срок</div>
               </div>
-              <div class="link-slider__wrapper swiper-wrapper repair-services-wrapper">
-                <div class="link-slider__slide swiper-slide repair-services">
+              <div class="swiper-wrapper repair-services-wrapper">
+                <div class="swiper-slide repair-services">
                   <div class="card">
                     <div class="card__title">Ремонтные услуги</div>
                     <div class="card__type-service">Диагностика</div>
@@ -267,10 +288,14 @@
                     <div class="card__price">Бесплатно</div>
                     <div class="card__title">Срок</div>
                     <div class="card__duration">30 мин</div>
-                    <button class="btn btn-dropdown btn-to-oder" type="button">Заказать</button>
+                    <button class="btn-dropdown flex-item-alignment" type="button">Заказать 
+                      <svg class="dropdown__icon">
+                        <use xlink:href="#dropdown"></use>
+                      </svg>
+                    </button>
                   </div>
                 </div>
-                <div class="link-slider__slide swiper-slide repair-services">
+                <div class="swiper-slide repair-services">
                   <div class="card">
                     <div class="card__title">Ремонтные услуги</div>
                     <div class="card__type-service">Замена дисплея</div>
@@ -278,10 +303,14 @@
                     <div class="card__price">1 000 ₽</div>
                     <div class="card__title">Срок</div>
                     <div class="card__duration">30-120 мин</div>
-                    <button class="btn btn-dropdown btn-to-oder" type="button">Заказать</button>
+                    <button class="btn-dropdown flex-item-alignment" type="button">Заказать 
+                      <svg class="dropdown__icon">
+                        <use xlink:href="#dropdown"></use>
+                      </svg>
+                    </button>
                   </div>
                 </div>
-                <div class="link-slider__slide swiper-slide repair-services">
+                <div class="swiper-slide repair-services">
                   <div class="card">
                     <div class="card__title">Ремонтные услуги</div>
                     <div class="card__type-service">Замена полифонического динамика</div>
@@ -289,10 +318,14 @@
                     <div class="card__price">1 000 ₽</div>
                     <div class="card__title">Срок</div>
                     <div class="card__duration">30-120 мин</div>
-                    <button class="btn btn-dropdown btn-to-oder" type="button">Заказать</button>
+                    <button class="btn-dropdown flex-item-alignment" type="button">Заказать 
+                      <svg class="dropdown__icon">
+                        <use xlink:href="#dropdown"></use>
+                      </svg>
+                    </button>
                   </div>
                 </div>
-                <div class="link-slider__slide swiper-slide repair-services">
+                <div class="swiper-slide repair-services">
                   <div class="card">
                     <div class="card__title">Ремонтные услуги</div>
                     <div class="card__type-service">Тестирование с выдачей технического заключения</div>
@@ -300,10 +333,14 @@
                     <div class="card__price">1 000 ₽</div>
                     <div class="card__title">Срок</div>
                     <div class="card__duration">30-120 мин</div>
-                    <button class="btn btn-dropdown btn-to-oder" type="button">Заказать</button>
+                    <button class=" btn-dropdown flex-item-alignment" type="button">Заказать 
+                      <svg class="dropdown__icon">
+                        <use xlink:href="#dropdown"></use>
+                      </svg>
+                    </button>
                   </div>
                 </div>
-                <div class="link-slider__slide swiper-slide repair-services">
+                <div class="swiper-slide repair-services">
                   <div class="card">
                     <div class="card__title">Ремонтные услуги</div>
                     <div class="card__type-service">Замена программного обеспечения</div>
@@ -311,28 +348,157 @@
                     <div class="card__price">1 000 ₽</div>
                     <div class="card__title">Срок</div>
                     <div class="card__duration">30-120 мин</div>
-                    <button class="btn btn-dropdown btn-to-oder" type="button">Заказать</button>
+                    <button class=" btn-dropdown  flex-item-alignment" type="button">Заказать 
+                      <svg class="dropdown__icon">
+                        <use xlink:href="#dropdown"></use>
+                      </svg>
+                    </button>
                   </div>
                 </div>
                 
-              </div><!--/.link-slider__wrapper-->
+              </div>
               
-              <div class="swiper-pagination type-pagination repair-services-pagination"></div>
+              <div class="swiper-pagination repair-services-pagination"></div>
             </div><!--/.repair-services-container-->
-
-            <div class="container">
+        
+            <div class="service-prices__info">
               <p class="service-prices__text">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
-              <a href="#" class="service-prices__link">Получить коммерческое предложение</a>
+              <a href="#" class="service-prices__link">Получить коммерческое предложение 
+                <span>
+                  <svg class="dropdown__icon">
+                    <use xlink:href="#dropdown"></use>
+                  </svg>
+                </span>
+              </a>
             </div>
+           
           </article><!--/.service-prices -->
         </section><!--/.repaired-devices -->
 
         <footer class="footer">
-          <div class="footer__item"><p lang="en">© 2019 CPS</p> Разработано командой Apesong </div>
-          <div class="footer__item"><a href="#">Политика конфиденциальности</a></div>
+          <div class="footer__item">
+            <p>© 2019 CPS</p>
+            <small>Разработано командой Apesong </small>
+          </div>
+          <div class="footer__item">
+            <a href="#">Политика конфиденциальности</a>
+          </div>
           <div class="footer__item">Информация, размещенная на данной странице, не является публичной офертой</div>
         </footer>
       </div><!--/.container -->
+
+      <div class="layer-blur"></div>
+      <section class="main-menu visibility-hidden">
+        <div class="main-menu__container">
+          <header class="main-menu__header flex-item-alignment">
+              <button aria-label="Закрыть меню" class=" btn-menu btn-close btn " type="button" tabindex="0">Закрыть меню</button>
+
+              <div class="main-menu__search flex-item-alignment ">
+                  <form class="main-menu__form visually-hidden" action="#" method="GET" role="search">
+                      <label for="search" class="visually-hidden">Поиск</label>
+                      <input class="main-menu__input" type="search" id="search" placeholder="Поиск">
+                  </form>
+
+                  <button aria-label="Поиск" class=" btn-search btn" type="button"></button>
+              </div>
+          </header>
+          <div class="main-menu__body">
+            <nav class="main-menu__nav">
+              <ul class="main-menu__nav-list"> 
+                    <li class="main-menu__nav-item">
+                      <a href="#" class="main-menu__nav-link main-menu__nav-link_active">Ремонт техники</a>
+                    </li>
+                    <li class="main-menu__nav-item">
+                        <a href="#" class="main-menu__nav-link">Услуги и сервисы</a>
+                    </li>
+                    <li class="main-menu__nav-item">
+                        <a href="#" class="main-menu__nav-link">Корпоративным клиентам</a>
+                    </li>
+                    <li class="main-menu__nav-item">
+                        <a href="#" class="main-menu__nav-link">Продавцам техники</a>
+                    </li>
+                    <li class="main-menu__nav-item">
+                        <a href="#" class="main-menu__nav-link">Партнерам</a>
+                    </li>
+                    <li class="main-menu__nav-item">
+                        <a href="#" class="main-menu__nav-link">Производителям</a>
+                    </li>
+                    <li class="main-menu__nav-item">
+                        <a href="#" class="main-menu__nav-link">Наши сервисные центры</a>
+                    </li>
+                    <li class="main-menu__nav-item">
+                        <a href="#" class="main-menu__nav-link">Контакты</a>
+                    </li>
+              </ul>
+          </nav>
+          <footer class="main-menu__footer">
+              <div class="connection">
+                  <button aria-label="Заказать звонок" class="btn-call btn" type="button">Заказать звонок</button>
+                  <button aria-label="Обратная связь" class="btn-chat btn" type="button">Обратная связь</button>
+                  <button aria-label="Профиль" class=" btn-profile btn" type="button">Профиль</button>
+              </div>
+
+              <div class="contacts">
+                <h3 class="visually-hidden">Контакты</h3>
+                <a class="contacts__mail" href="mailto:mail@cps.com">mail@cps.com</a>
+                <a class="contacts__tel-cps" href="tel:+8 800 890 8900">8 800 890 8900</a>  
+              </div>
+                       
+              <div class="lang">
+                <h3 class="visually-hidden">Язык</h3>
+                <a href="#" class="lang__link lang__link_active">RU</a>
+                <a href="#" class="lang__link">EN</a>
+                <a href="#" class="lang__link">CH</a>
+              </div> 
+          </footer>  
+          </div>
+        </div> <!--/.container--> 
+      </section><!--/.main-menu-->
+      <section class="modal-window feedback visibility-hidden">
+        <div class="container modal-window__container">
+            <button aria-label="Закрыть модальное окно" class=" btn-chat btn-close btn " type="button" tabindex="0">Закрыть модальное окно</button>
+
+            <h2 class="title modal-window__title  selected">Обратная связь</h2>
+
+            <form class="modal-window__form" action="#" method="POST" role="feedback">
+                <input class=" modal-window__input"  type="text" placeholder="Имя">
+                <input class=" modal-window__input" type="tel" placeholder="Телефон">
+                <input class=" modal-window__input" type="mail" placeholder="Электронная почта">
+                <textarea class=" modal-window__input" rows="4" placeholder="Сообщение"></textarea>
+                <p class="modal-window__warning-text">
+                  Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей <a href="#">политикой конфиденциальности</a>
+                </p>
+                <div class="modal-window__btn-wrapper">
+                  <button aria-label="ОТПРАВИТЬ" class=" btn-dropdown flex-item-alignment" type="submit">ОТПРАВИТЬ
+                    <svg class="dropdown__icon">
+                      <use xlink:href="#dropdown"></use>
+                    </svg>
+                  </button>
+                </div>
+            </form>
+        </div>
+      </section><!--/.modal-window-->
+      <section class="modal-window callback visibility-hidden">
+        <div class="container modal-window__container">
+            <button aria-label="Закрыть модальное окно" class="btn-call btn-close btn " type="button" tabindex="0">Закрыть модальное окно</button>
+
+            <h2 class="title modal-window__title  selected">Заказать звонок</h2>
+
+            <form class="modal-window__form" action="#" method="POST" role="feedback">
+                <input class=" modal-window__input" type="tel" placeholder="Телефон">
+                <p class="modal-window__warning-text">
+                    Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей <a href="#">политикой конфиденциальности</a>
+                </p>
+                <div class="modal-window__btn-wrapper">
+                    <button aria-label="ОТПРАВИТЬ" class=" btn-dropdown flex-item-alignment" type="submit">ОТПРАВИТЬ
+                      <svg class="dropdown__icon">
+                        <use xlink:href="#dropdown"></use>
+                      </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+      </section><!--/.modal-window-->
       
         
     </div><!--/.wrapper -->
