@@ -73,7 +73,7 @@
   }
   .brands-container,
   .types-container {
-    height: 264px;
+    min-height: 264px;
     margin: 0 -24px;
   }
   .swiper-container.fade-copy::after {
@@ -277,8 +277,9 @@
     width: 240px !important;
     margin: 0 0 16px 32px;
   }
-  .show-more-label {
-    margin: 24px 32px 50px;
+  .show-brands,
+  .show-types {
+    margin: 24px 32px;
   }
   .repair-services {
     width: auto !important;
@@ -335,8 +336,5 @@
   .menu-open {
     -webkit-transform: translateX(0);
             transform: translateX(0);
-  }
-  .show-search-form {
-    height: 107px;
   }
 }

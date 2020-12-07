@@ -1,39 +1,75 @@
-let mySwiper = undefined;
-function initSwiper() {
-    let screenWidth = innerWidth;
-    if(screenWidth < 768 && mySwiper == undefined) {            
-        mySwiper = new Swiper('.swiper-container', {            
-            spaceBetween: 16,
-            pagination: {
-                el: '.swiper-pagination',
-            },
-            slidesPerView: 1.3,
-        });
-    } else if (screenWidth >= 768 && mySwiper != undefined) {
-        mySwiper.destroy(true, true);
-        mySwiper = undefined;
-        let swiperWrappers = document.querySelectorAll('.swiper-wrapper'); 
-        let swiperSlides = document.querySelectorAll('.swiper-slide');
-        for (let wrapper of swiperWrappers) {
-            wrapper.removeAttr('style');
-        }
-        for (let slide of swiperSlides) {
-            slide.removeAttr('style'); 
-        }               
-    }        
-}
 
-initSwiper();
+let mainDoc = document.querySelector('.wrapper');
+let blur = document.querySelector('.layer-blur');
+let menu = document.querySelector('.main-menu');
+let btnMenu = mainDoc.querySelector('.btn-menu');
+let btnsClose = mainDoc.querySelectorAll('.btn-close');
+console.log(btnsClose);
+let btnsCall = mainDoc.querySelectorAll('.btn-call');
+console.log(btnsCall);
+let callback = mainDoc.querySelector('.callback');
+console.log(callback);
+let btnsChat = mainDoc.querySelectorAll('.btn-chat');
+console.log(btnsChat);
+let feedback = mainDoc.querySelector('.feedback');
+console.log(feedback);
 
-window.addEventListener('resize', function(){
-    initSwiper();        
+
+btnMenu.addEventListener('click', function () {
+    menu.classList.add('menu-open');
+    menu.classList.remove('visibility-hidden');
+    blur.classList.add('layer-blur_active');
+});
+function closeMenu () {
+    menu.classList.remove('menu-open');
+    menu.classList.add('visibility-hidden');
+};
+function closeCallback () {
+    callback.classList.remove('modal-window-open');
+    callback.classList.add('visibility-hidden');
+};
+function closeFeedback () {
+    feedback.classList.remove('modal-window-open');
+    feedback.classList.add('visibility-hidden');
+};
+
+blur.addEventListener('click', function () {
+    closeMenu ();
+    closeCallback ();
+    closeFeedback ();
+    blur.classList.remove('layer-blur_active');
 });
 
-let layerBlur = document.querySelector('.layer-blur');
-let mainMenu = document.querySelector('.main-menu');
-let mainMenulinks = mainMenu.querySelectorAll('.main-menu__link');
-let langs = mainMenu.querySelectorAll('.lang__link');
-let ServiceNavLinks = document.querySelectorAll('.services-nav__link');
+for (let btn of btnsClose) {
+    btn.addEventListener('click', function () {
+        closeMenu ();
+        closeCallback ();
+        closeFeedback ();
+        blur.classList.remove('layer-blur_active');
+    });
+};
+for (let btn of btnsCall) {
+    btn.addEventListener('click', function () {
+        callback.classList.add('modal-window-open');
+        callback.classList.remove('visibility-hidden');
+        blur.classList.add('layer-blur_active');
+        closeMenu ();
+        closeFeedback ();
+    });
+};
+for (let btn of btnsChat) {
+    btn.addEventListener('click', function () {
+        feedback.classList.add('modal-window-open');
+        feedback.classList.remove('visibility-hidden');
+        blur.classList.add('layer-blur_active');
+        closeMenu ();
+        closeCallback ();
+    });
+};
+
+let menuNavLinks = mainDoc.querySelectorAll('.main-menu__nav-link');
+let menuLangLinks = mainDoc.querySelectorAll('.lang__link');
+let servicesNavLinks = mainDoc.querySelectorAll('.services__nav-link');
 
 function activeToggle(links, linkActive) {
     for (let link of links) {
@@ -48,78 +84,44 @@ function activeToggle(links, linkActive) {
     }
 }
 
-activeToggle(mainMenulinks, 'main-menu__nav-link_active');
-activeToggle(langs, 'lang__link_active');
-activeToggle(ServiceNavLinks, 'services__nav-link_active');
 
-let btnsMenu = document.querySelectorAll('.btn-menu');
-let btnsChant = document.querySelectorAll('.btn-chat');
-let btnsCall = document.querySelectorAll('.btn-call');
-let modalWindows = document.querySelectorAll('.modal-window');
-let modalWindowFeedback = document.querySelector('.feedback');
-let modalWindowCallback = document.querySelector('.callback');
+activeToggle(menuNavLinks, 'main-menu__nav-link_active');
+activeToggle(menuLangLinks, 'lang__link_active');
+activeToggle(servicesNavLinks, 'services__nav-link_active');
 
-function menuToggle(btns, window) {
-    for (let btn of btns) {
-        btn.onclick = function() {
-            for (let modalWindow of modalWindows) {
-                modalWindow.classList.remove('modal-window-open');
-            }
-            
-            window.classList.toggle('visibility-hidden');
-            window.classList.toggle('menu-open');
-            if (window.classList.contains('menu-open')) {
-                window.classList.remove('visibility-hidden');
-            }
-            layerBlur.classList.toggle('layer-blur_active');
+let menuSearchBtns = mainDoc.querySelectorAll('.btn-search');
+let menuSearchForm = mainDoc.querySelector('.main-menu__search ');
+for (let btn of menuSearchBtns) {
+    btn.addEventListener('click', function () {
+        menuSearchForm.classList.toggle('show-search-form');
+    });
+};
 
-        }
-    } 
-}
-function modalWindowToggle(btns, window) {
-    for (let btn of btns) {
-        btn.onclick = function() {
-            mainMenu.classList.remove('menu-open');
-            window.classList.toggle('modal-window-open');
+let readMore = mainDoc.querySelector('.read-more');
+let servicesText = mainDoc.querySelector('.services__content-text');
 
-            if (window.classList.contains('modal-window-open')) {
-                
-                if (window.classList.contains('feedback')) {
-                    modalWindowCallback.classList.remove('modal-window-open');
-                    window.classList.add('visibility-hidden');
-                }
-                else {
-                    modalWindowFeedback.classList.remove('modal-window-open');
-                    window.classList.add('visibility-hidden');
-                }
-            }
-            window.classList.toggle('visibility-hidden');
-            layerBlur.classList.toggle('layer-blur_active');
-            
-        }
-    } 
-}
-menuToggle(btnsMenu, mainMenu);
-modalWindowToggle(btnsChant, modalWindowFeedback);
-modalWindowToggle(btnsCall, modalWindowCallback);
-
-let mainMenuSearch = mainMenu.querySelector('.main-menu__search');
-let mainMenuForm = mainMenu.querySelector('.main-menu__form');
-let btnSearch = mainMenu.querySelector('.btn-search');
-
-btnSearch.onclick = function () {
-    mainMenuSearch.classList.toggle('show-search-form');
-    mainMenuForm.classList.toggle('visually-hidden');
-    btnSearch.classList.toggle('btn-close');
-}
-
-
-layerBlur.addEventListener('click', function () {
-    mainMenu.classList.remove('menu-open');
-    mainMenu.classList.add('visibility-hidden');
-    modalWindowCallback.classList.remove('modal-window-open');
-    modalWindowCallback.classList.add('visibility-hidden');
-    modalWindowFeedback.classList.remove('modal-window-open');
-    modalWindowFeedback.classList.add('visibility-hidden');
-    layerBlur.classList.toggle('layer-blur_active');
+readMore.addEventListener('click', function () {
+    servicesText.classList.toggle('height-auto');
+    readMore.classList.toggle('hide');
 });
+
+let showBrands = mainDoc.querySelector('.show-brands');
+let brandWrapper = mainDoc.querySelector('.brand-wrapper');
+let brandContainer = mainDoc.querySelector('.brands-container');
+
+showBrands.addEventListener('click', function () {
+    brandWrapper.classList.toggle('height-auto');
+    brandContainer.classList.toggle('height-auto');
+    showBrands.classList.toggle('hide');
+});
+
+let showTypes = mainDoc.querySelector('.show-types');
+let typeWrapper = mainDoc.querySelector('.type-wrapper');
+let typeContainer = mainDoc.querySelector('.types-container');
+
+showTypes.addEventListener('click', function () {
+    typeWrapper.classList.toggle('height-auto');
+    typeContainer.classList.toggle('height-auto');
+    showTypes.classList.toggle('hide');
+});
+

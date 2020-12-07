@@ -24,17 +24,29 @@
         <div class="container">
           <div class="header__menu flex-item-alignment">
             <div class="menu flex-item-alignment">
-              <button aria-label="Меню" class="btn-menu btn" type="button">Меню</button>
+              <button aria-label="Меню" class="btn-menu btn" type="button">Меню
+                <img src="img/icons/burger.svg" alt="menu">
+              </button>
             </div>
             <div class="header__connection flex-item-alignment">
               <div class="connection" hidden>
-                <button aria-label="Заказать звонок" class="btn-call btn" type="button">Заказать звонок</button>
-                <button aria-label="Обратная связь" class="btn-chat btn" type="button">Обратная связь</button>
-                <button aria-label="Профиль" class="btn-profile btn" type="button">Профиль</button>
+                <button aria-label="Заказать звонок" class="btn-call btn" type="button">Заказать звонок
+                  <img src="img/icons/call.svg" alt="call">
+                </button>
+                <button aria-label="Обратная связь" class="btn-chat btn" type="button">Обратная связь
+                  <img src="img/icons/chat.svg" alt="call">
+                </button>
+                <button aria-label="Профиль" class="btn-profile btn" type="button">Профиль
+                  <img src="img/icons/profile.svg" alt="call">
+                </button>
               </div>
               <div class="handling flex-item-alignment">
-                <button aria-label="Оставить заявку" class="btn-repair btn" type="button">Оставить заявку</button>
-                <button aria-label="Статус ремонта" class="btn-checkstatus btn" type="button">Статус ремонта</button>
+                <button aria-label="Оставить заявку" class="btn-repair btn" type="button">Оставить заявку
+                  <img src="img/icons/repair.svg" alt="call">
+                </button>
+                <button aria-label="Статус ремонта" class="btn-checkstatus btn" type="button">Статус ремонта
+                  <img src="img/icons/checkstatus.svg" alt="call">
+                </button>
               </div>
             </div><!--/.header__connection-->
           </div><!--/.header__menu-->
@@ -49,10 +61,14 @@
             <h1 class="services__title title">Услуги и сервисы</h1>
             <div class="handling flex-item-alignment" hidden>
               <label for="repair" class="handling__btn-label">Оставить заявку</label>
-              <button id="repair" aria-label="Оставить заявку" class="btn-repair btn" type="button">Оставить заявку</button>
+              <button id="repair" aria-label="Оставить заявку" class="btn-repair btn" type="button">Оставить заявку
+                <img src="img/icons/repair.svg" alt="call">
+              </button>
   
               <label for="checkstatus" class="handling__btn-label">Статус ремонта</label>
-              <button id="checkstatus" aria-label="Статус ремонта" class="btn-checkstatus btn" type="button">Статус ремонта</button>
+              <button id="checkstatus" aria-label="Статус ремонта" class="btn-checkstatus btn" type="button">Статус ремонта
+                <img src="img/icons/checkstatus.svg" alt="checkstatus">
+              </button>
             </div>
           </div>   
           <nav class="services__nav fade-copy">
@@ -79,14 +95,19 @@
             </ul>      
           </nav>
           <div class="services__content">
+            
             <div class="services__content-text-wrapper">
-              <input type="checkbox" class="services__read-more-checkbox visually-hidden" id="read-more-checkbox">
               <div class="services__content-text">
                 <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
                 <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
               </div>
   
-              <label for="read-more-checkbox" class="services__read-more-label" ></label>
+              <button class="btn-more read-more flex-item-alignment read" type="button">
+                <span class="flex-item-alignment">
+                  <img src="img/icons/more.svg" alt="show more">
+                </span>
+                
+              </button>
             </div>
           </div>                         
         </section><!--/.services -->
@@ -96,7 +117,6 @@
             <h3 class="repaired-devices__title">Ремонт техники различных брендов</h3>
             
             <div class="swiper-container brands-container fade-copy">
-              <input type="checkbox" class="show-more-checkbox visually-hidden" id="show-more-brands"> 
 
               <div class="swiper-wrapper brand-wrapper">
 
@@ -104,7 +124,7 @@
                   <a href="#" class="swiper-slide__link  flex-item-alignment brand">
                     <img src="img/logos//lenovo.svg" alt="lenovo">
                     <span class="dropdown flex-item-alignment">
-                      <svg class="dropdown__icon">
+                      <svg class="dropdown__icon" style="width: 8px; height: 12px">
                         <use xlink:href="#dropdown"></use>
                       </svg>
                     </span>
@@ -114,7 +134,7 @@
                   <a href="#" class="swiper-slide__link  flex-item-alignment brand">
                     <img src="img/logos//samsung.svg" alt="samsung">
                     <span class="dropdown flex-item-alignment">
-                      <svg class="dropdown__icon">
+                      <svg class="dropdown__icon" style="width: 8px; height: 12px">
                         <use xlink:href="#dropdown"></use>
                       </svg>
                     </span>
@@ -124,7 +144,7 @@
                   <a href="#" class="swiper-slide__link  flex-item-alignment brand">
                     <img src="img/logos//apple.svg" alt="apple">
                     <span class="dropdown flex-item-alignment">
-                      <svg class="dropdown__icon">
+                      <svg class="dropdown__icon" style="width: 8px; height: 12px">
                         <use xlink:href="#dropdown"></use>
                       </svg>
                     </span>
@@ -134,7 +154,7 @@
                   <a href="#" class="swiper-slide__link  flex-item-alignment brand">
                     <img src="img/logos//viewsonic.svg" alt="viewsonic">
                     <span class="dropdown flex-item-alignment">
-                      <svg class="dropdown__icon">
+                      <svg class="dropdown__icon" style="width: 8px; height: 12px">
                         <use xlink:href="#dropdown"></use>
                       </svg>
                     </span>
@@ -144,7 +164,7 @@
                   <a href="#" class="swiper-slide__link  flex-item-alignment brand">
                     <img src="img/logos//bosch.svg" alt="bosch">
                     <span class="dropdown flex-item-alignment">
-                      <svg class="dropdown__icon">
+                      <svg class="dropdown__icon" style="width: 8px; height: 12px">
                         <use xlink:href="#dropdown"></use>
                       </svg>
                     </span>
@@ -154,7 +174,7 @@
                   <a href="#" class="swiper-slide__link  flex-item-alignment brand">
                     <img src="img/logos//hp.svg" alt="hp">
                     <span class="dropdown flex-item-alignment">
-                      <svg class="dropdown__icon">
+                      <svg class="dropdown__icon" style="width: 8px; height: 12px">
                         <use xlink:href="#dropdown"></use>
                       </svg>
                     </span>
@@ -164,7 +184,7 @@
                   <a href="#" class="swiper-slide__link  flex-item-alignment brand">
                     <img src="img/logos//acer.svg" alt="acer">
                     <span class="dropdown flex-item-alignment">
-                      <svg class="dropdown__icon">
+                      <svg class="dropdown__icon" style="width: 8px; height: 12px">
                         <use xlink:href="#dropdown"></use>
                       </svg>
                     </span>
@@ -174,7 +194,7 @@
                   <a href="#" class="swiper-slide__link  flex-item-alignment brand">
                     <img src="img/logos//sony.svg" alt="sony">
                     <span class="dropdown flex-item-alignment">
-                      <svg class="dropdown__icon">
+                      <svg class="dropdown__icon" style="width: 8px; height: 12px">
                         <use xlink:href="#dropdown"></use>
                       </svg>
                     </span>
@@ -184,7 +204,7 @@
                   <a href="#" class="swiper-slide__link  flex-item-alignment brand">
                     <img src="img/logos//lenovo.svg" alt="lenovo">
                     <span class="dropdown flex-item-alignment">
-                      <svg class="dropdown__icon">
+                      <svg class="dropdown__icon" style="width: 8px; height: 12px">
                         <use xlink:href="#dropdown"></use>
                       </svg>
                     </span>
@@ -194,7 +214,7 @@
                   <a href="#" class=" swiper-slide__link  flex-item-alignment brand">
                     <img src="img/logos//samsung.svg" alt="samsung">
                     <span class="dropdown flex-item-alignment">
-                      <svg class="dropdown__icon">
+                      <svg class="dropdown__icon" style="width: 8px; height: 12px">
                         <use xlink:href="#dropdown"></use>
                       </svg>
                     </span>
@@ -204,7 +224,7 @@
                   <a href="#" class=" swiper-slide__link  flex-item-alignment brand">
                     <img src="img/logos//apple.svg" alt="apple">
                     <span class="dropdown flex-item-alignment">
-                      <svg class="dropdown__icon">
+                      <svg class="dropdown__icon" style="width: 8px; height: 12px">
                         <use xlink:href="#dropdown"></use>
                       </svg>
                     </span>
@@ -214,7 +234,11 @@
               </div>
 
               <div class="swiper-pagination brand-pagination"></div>
-              <label for="show-more-brands" class="show-more-label" tabindex="0"></label>
+              <button class="btn-more show-brands flex-item-alignment" type="button">
+                <span class="flex-item-alignment ">
+                  <img src="img/icons/more.svg" alt="show more">
+                </span>
+              </button>
             </div>
 
             
@@ -223,12 +247,11 @@
           <article class="type-of-tech">
             <h3 class="repaired-devices-title">Ремонт различных видов техники</h3> 
             <div class=" swiper-container types-container fade-copy">
-              <input type="checkbox" class="show-more-checkbox visually-hidden" id="show-more-typeTech"> 
               <div class="swiper-wrapper type-wrapper">
                 <div class="swiper-slide type">
                   <a href="#" class="swiper-slide__link  flex-item-alignment type">Ремонт ноутбуков
                     <span class="dropdown flex-item-alignment">
-                      <svg class="dropdown__icon">
+                      <svg class="dropdown__icon" style="width: 8px; height: 12px">
                         <use xlink:href="#dropdown"></use>
                       </svg>
                     </span>
@@ -237,7 +260,7 @@
                 <div class="swiper-slide type">
                   <a href="#" class="swiper-slide__link  flex-item-alignment type">Ремонт планшетов
                     <span class="dropdown flex-item-alignment">
-                      <svg class="dropdown__icon">
+                      <svg class="dropdown__icon" style="width: 8px; height: 12px">
                         <use xlink:href="#dropdown"></use>
                       </svg>
                     </span>
@@ -246,7 +269,7 @@
                 <div class="swiper-slide type">
                   <a href="#" class=" swiper-slide__link  flex-item-alignment type">Ремонт ПК
                     <span class="dropdown flex-item-alignment">
-                      <svg class="dropdown__icon">
+                      <svg class="dropdown__icon" style="width: 8px; height: 12px">
                         <use xlink:href="#dropdown"></use>
                       </svg>
                     </span>
@@ -255,7 +278,7 @@
                 <div class="swiper-slide type">
                   <a href="#" class=" swiper-slide__link  flex-item-alignment type">Ремонт  мониторов
                     <span class="dropdown flex-item-alignment">
-                      <svg class="dropdown__icon">
+                      <svg class="dropdown__icon" style="width: 8px; height: 12px">
                         <use xlink:href="#dropdown"></use>
                       </svg>
                     </span>
@@ -264,7 +287,11 @@
               </div><!--/.link-slider__wrapper-->
 
               <div class="swiper-pagination type-pagination"></div>
-              <label for="show-more-typeTech" class="show-more-label" tabindex="0"></label>
+              <button class="btn-more show-types flex-item-alignment" type="button">
+                <span class="flex-item-alignment">
+                  <img src="img/icons/more.svg" alt="show more">
+                </span>
+              </button>
             </div>
 
             
@@ -289,7 +316,7 @@
                     <div class="card__title">Срок</div>
                     <div class="card__duration">30 мин</div>
                     <button class="btn-dropdown flex-item-alignment" type="button">Заказать 
-                      <svg class="dropdown__icon">
+                      <svg class="dropdown__icon" style="width: 8px; height: 12px">
                         <use xlink:href="#dropdown"></use>
                       </svg>
                     </button>
@@ -304,7 +331,7 @@
                     <div class="card__title">Срок</div>
                     <div class="card__duration">30-120 мин</div>
                     <button class="btn-dropdown flex-item-alignment" type="button">Заказать 
-                      <svg class="dropdown__icon">
+                      <svg class="dropdown__icon" style="width: 8px; height: 12px">
                         <use xlink:href="#dropdown"></use>
                       </svg>
                     </button>
@@ -319,7 +346,7 @@
                     <div class="card__title">Срок</div>
                     <div class="card__duration">30-120 мин</div>
                     <button class="btn-dropdown flex-item-alignment" type="button">Заказать 
-                      <svg class="dropdown__icon">
+                      <svg class="dropdown__icon" style="width: 8px; height: 12px">
                         <use xlink:href="#dropdown"></use>
                       </svg>
                     </button>
@@ -334,7 +361,7 @@
                     <div class="card__title">Срок</div>
                     <div class="card__duration">30-120 мин</div>
                     <button class=" btn-dropdown flex-item-alignment" type="button">Заказать 
-                      <svg class="dropdown__icon">
+                      <svg class="dropdown__icon" style="width: 8px; height: 12px">
                         <use xlink:href="#dropdown"></use>
                       </svg>
                     </button>
@@ -349,7 +376,7 @@
                     <div class="card__title">Срок</div>
                     <div class="card__duration">30-120 мин</div>
                     <button class=" btn-dropdown  flex-item-alignment" type="button">Заказать 
-                      <svg class="dropdown__icon">
+                      <svg class="dropdown__icon" style="width: 8px; height: 12px">
                         <use xlink:href="#dropdown"></use>
                       </svg>
                     </button>
@@ -365,7 +392,7 @@
               <p class="service-prices__text">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
               <a href="#" class="service-prices__link">Получить коммерческое предложение 
                 <span>
-                  <svg class="dropdown__icon">
+                  <svg class="dropdown__icon" style="width: 8px; height: 12px">
                     <use xlink:href="#dropdown"></use>
                   </svg>
                 </span>
@@ -391,15 +418,20 @@
       <section class="main-menu visibility-hidden">
         <div class="main-menu__container">
           <header class="main-menu__header flex-item-alignment">
-              <button aria-label="Закрыть меню" class=" btn-menu btn-close btn " type="button" tabindex="0">Закрыть меню</button>
-
-              <div class="main-menu__search flex-item-alignment ">
-                  <form class="main-menu__form visually-hidden" action="#" method="GET" role="search">
+              <button aria-label="Закрыть меню" class="btn-close btn " type="button" tabindex="0">Закрыть меню
+                <img src="img/icons/close.svg" alt="close">
+              </button>
+              <button aria-label="Поиск" class="btn-search btn" type="button">
+                <img src="img/icons/search.svg" alt="search">
+              </button>
+              <div class="main-menu__search">
+                  <form class="main-menu__form flex-item-alignment" action="#" method="GET" role="search">
                       <label for="search" class="visually-hidden">Поиск</label>
                       <input class="main-menu__input" type="search" id="search" placeholder="Поиск">
+                      <button aria-label="Поиск" class="btn-search btn-search-close btn" type="button">
+                        <img src="img/icons/close.svg" alt="close">
+                      </button>
                   </form>
-
-                  <button aria-label="Поиск" class=" btn-search btn" type="button"></button>
               </div>
           </header>
           <div class="main-menu__body">
@@ -433,9 +465,15 @@
           </nav>
           <footer class="main-menu__footer">
               <div class="connection">
-                  <button aria-label="Заказать звонок" class="btn-call btn" type="button">Заказать звонок</button>
-                  <button aria-label="Обратная связь" class="btn-chat btn" type="button">Обратная связь</button>
-                  <button aria-label="Профиль" class=" btn-profile btn" type="button">Профиль</button>
+                  <button aria-label="Заказать звонок" class="btn-call btn" type="button">Заказать звонок
+                    <img src="img/icons/call.svg" alt="call">
+                  </button>
+                  <button aria-label="Обратная связь" class="btn-chat btn" type="button">Обратная связь
+                    <img src="img/icons/chat.svg" alt="chat">
+                  </button>
+                  <button aria-label="Профиль" class=" btn-profile btn" type="button">Профиль
+                    <img src="img/icons/profile.svg" alt="profile">
+                  </button>
               </div>
 
               <div class="contacts">
@@ -456,7 +494,9 @@
       </section><!--/.main-menu-->
       <section class="modal-window feedback visibility-hidden">
         <div class="container modal-window__container">
-            <button aria-label="Закрыть модальное окно" class=" btn-chat btn-close btn " type="button" tabindex="0">Закрыть модальное окно</button>
+            <button aria-label="Закрыть модальное окно" class="btn-close btn " type="button" tabindex="0">Закрыть модальное окно
+              <img src="img/icons/close.svg" alt="close">
+            </button>
 
             <h2 class="title modal-window__title  selected">Обратная связь</h2>
 
@@ -470,7 +510,7 @@
                 </p>
                 <div class="modal-window__btn-wrapper">
                   <button aria-label="ОТПРАВИТЬ" class=" btn-dropdown flex-item-alignment" type="submit">ОТПРАВИТЬ
-                    <svg class="dropdown__icon">
+                    <svg class="dropdown__icon" style="width: 8px; height: 12px">
                       <use xlink:href="#dropdown"></use>
                     </svg>
                   </button>
@@ -480,7 +520,9 @@
       </section><!--/.modal-window-->
       <section class="modal-window callback visibility-hidden">
         <div class="container modal-window__container">
-            <button aria-label="Закрыть модальное окно" class="btn-call btn-close btn " type="button" tabindex="0">Закрыть модальное окно</button>
+            <button aria-label="Закрыть модальное окно" class="btn-close btn " type="button" tabindex="0">Закрыть модальное окно
+              <img src="img/icons/close.svg" alt="close">
+            </button>
 
             <h2 class="title modal-window__title  selected">Заказать звонок</h2>
 
@@ -491,7 +533,7 @@
                 </p>
                 <div class="modal-window__btn-wrapper">
                     <button aria-label="ОТПРАВИТЬ" class=" btn-dropdown flex-item-alignment" type="submit">ОТПРАВИТЬ
-                      <svg class="dropdown__icon">
+                      <svg class="dropdown__icon" style="width: 8px; height: 12px">
                         <use xlink:href="#dropdown"></use>
                       </svg>
                     </button>
@@ -503,7 +545,7 @@
         
     </div><!--/.wrapper -->
     
-    <script src="js/swiper.min.js" rel="preload"></script>
-    <script src="js/script.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/new.js"></script>
   </body>
 </html>
