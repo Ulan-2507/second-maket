@@ -245,6 +245,10 @@ $DarkGray: #7E7E82;
     & > .btn {
         margin-left: 16px;
     }
+    &__btn-label {
+        margin: 0 9px 0 32px;
+        cursor: pointer;
+    }
 }
 
 .services {
@@ -618,6 +622,7 @@ $DarkGray: #7E7E82;
 
     &__nav-item {
         margin-bottom: 32px;
+        cursor: pointer;
         
         &:hover,
         &:focus {

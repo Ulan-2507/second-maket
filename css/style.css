@@ -694,6 +694,11 @@ body {
   margin-left: 16px;
 }
 
+.handling__btn-label {
+  margin: 0 9px 0 32px;
+  cursor: pointer;
+}
+
 .services__title {
   margin: 24px 0px;
 }
@@ -1106,6 +1111,7 @@ body {
 
 .main-menu__nav-item {
   margin-bottom: 32px;
+  cursor: pointer;
 }
 
 .main-menu__nav-item:hover, .main-menu__nav-item:focus {
@@ -1542,9 +1548,6 @@ body {
   }
   .handling::before {
     display: none;
-  }
-  .handling__btn-label {
-    margin: 0 9px 0 32px;
   }
   .title::before {
     margin-left: -32px;

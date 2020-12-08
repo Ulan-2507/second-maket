@@ -247,9 +247,6 @@
   .handling::before {
     display: none;
   }
-  .handling__btn-label {
-    margin: 0 9px 0 32px;
-  }
   .title::before {
     margin-left: -32px;
   }
