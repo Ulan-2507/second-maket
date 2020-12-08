@@ -277,7 +277,10 @@ $DarkGray: #7E7E82;
         &:hover,
         &:focus {
             background-color: $white;
-            transition: .2s linear;
+            transition: .1s linear;
+        }
+        &:active {
+            color: $red;
         }
         &_active {
             background-color: $white;
@@ -614,10 +617,20 @@ $DarkGray: #7E7E82;
 
     &__nav-item {
         margin-bottom: 32px;
+        
+        &:hover,
+        &:focus {
+            color: $DarkGray;
+        }
+        &:active {
+            color: $red;
+        }
     }
 
     &__nav-link {
-        transition: all .2s ease;
+        display: block;
+        width: 100%;
+        transition: all .2s linear;
 
         &_active {
             color: $DarkGray;
@@ -638,6 +651,9 @@ $DarkGray: #7E7E82;
         &:hover,
         &:focus {
             color: $DarkGray;
+        }
+        &:active {
+            color: $red;
         }
     }
 

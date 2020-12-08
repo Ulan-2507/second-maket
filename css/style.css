@@ -727,8 +727,12 @@ body {
 
 .services__nav-link:hover, .services__nav-link:focus {
   background-color: #FFFFFF;
-  -webkit-transition: .2s linear;
-  transition: .2s linear;
+  -webkit-transition: .1s linear;
+  transition: .1s linear;
+}
+
+.services__nav-link:active {
+  color: #ff0022;
 }
 
 .services__nav-link_active {
@@ -1104,9 +1108,19 @@ body {
   margin-bottom: 32px;
 }
 
+.main-menu__nav-item:hover, .main-menu__nav-item:focus {
+  color: #7E7E82;
+}
+
+.main-menu__nav-item:active {
+  color: #ff0022;
+}
+
 .main-menu__nav-link {
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
+  display: block;
+  width: 100%;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
 }
 
 .main-menu__nav-link_active {
@@ -1128,6 +1142,10 @@ body {
 
 .main-menu__nav-link:hover, .main-menu__nav-link:focus {
   color: #7E7E82;
+}
+
+.main-menu__nav-link:active {
+  color: #ff0022;
 }
 
 .show-search-form {

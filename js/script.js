@@ -70,6 +70,7 @@ for (let btn of btnsChat) {
     });
 };
 
+let menuNavItem = mainDoc.querySelectorAll('.main-menu__nav-item');
 let menuNavLinks = mainDoc.querySelectorAll('.main-menu__nav-link');
 let menuLangLinks = mainDoc.querySelectorAll('.lang__link');
 let servicesNavLinks = mainDoc.querySelectorAll('.services__nav-link');
@@ -87,7 +88,7 @@ function activeToggle(links, linkActive) {
     }
 }
 
-
+activeToggle(menuNavItem, 'main-menu__nav-link_active');
 activeToggle(menuNavLinks, 'main-menu__nav-link_active');
 activeToggle(menuLangLinks, 'lang__link_active');
 activeToggle(servicesNavLinks, 'services__nav-link_active');
