@@ -776,15 +776,6 @@ body {
   content: "Читать далее";
 }
 
-.hide .flex-item-alignment {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.hide::after {
-  content: "Свернуть";
-}
-
 .title {
   position: relative;
   font-size: 28px;
@@ -883,6 +874,15 @@ body {
 .show-brands::after,
 .show-types::after {
   content: "Показать все";
+}
+
+.hide .flex-item-alignment {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.hide::after {
+  content: "Свернуть";
 }
 
 .swiper-pagination-bullet {

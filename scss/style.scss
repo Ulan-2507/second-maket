@@ -325,14 +325,7 @@ $DarkGray: #7E7E82;
         content: "Читать далее"
     }
 }
-.hide {
-    & .flex-item-alignment {
-        transform: rotate(180deg);
-    }
-    &::after {
-        content: "Свернуть"
-    }
-}
+
 .title {
     position: relative;
     font-size: 28px;            
@@ -418,6 +411,14 @@ $DarkGray: #7E7E82;
     margin: 24px;
     &::after {
         content: "Показать все";
+    }
+}
+.hide {
+    & .flex-item-alignment {
+        transform: rotate(180deg);
+    }
+    &::after {
+        content: "Свернуть"
     }
 }
 .swiper-pagination-bullet {
