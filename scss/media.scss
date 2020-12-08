@@ -100,10 +100,12 @@
         height: 184px;
         overflow: hidden;
         padding-top: 24px;
+        transform: none !important;
+        transition: none !important;
     }
     .swiper-slide {
         width: 224px !important;
-        margin: 0 0 16px 24px;
+        margin: 0 0 16px 24px !important;
     }    
     .show-more-label {
         display: block;
@@ -287,7 +289,7 @@
     }
     .swiper-slide {
         width: 240px !important;
-        margin: 0 0 16px 32px;
+        margin: 0 0 16px 32px !important;
     } 
     .show-brands,
     .show-types {

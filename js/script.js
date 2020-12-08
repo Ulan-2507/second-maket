@@ -7,15 +7,11 @@ let blur = document.querySelector('.layer-blur');
 let menu = document.querySelector('.main-menu');
 let btnMenu = mainDoc.querySelector('.btn-menu');
 let btnsClose = mainDoc.querySelectorAll('.btn-close');
-console.log(btnsClose);
 let btnsCall = mainDoc.querySelectorAll('.btn-call');
-console.log(btnsCall);
 let callback = mainDoc.querySelector('.callback');
-console.log(callback);
 let btnsChat = mainDoc.querySelectorAll('.btn-chat');
-console.log(btnsChat);
 let feedback = mainDoc.querySelector('.feedback');
-console.log(feedback);
+
 
 
 btnMenu.addEventListener('click', function () {
@@ -144,16 +140,13 @@ function catalogSliderInit () {
   }
 }
 
+
 function catalogSliderDestroy() {
     if (mySwiper) {
-        for (let i = 0; i < mySwiper.length; i++) {
-            mySwiper[i].destroy();
-            mySwiper[i] = null; 
-        }
-        
+        mySwiper.destroy();
+        mySwiper = null;  
     }
 }
-
 
 
 window.addEventListener('resize', function() {
