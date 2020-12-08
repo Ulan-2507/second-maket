@@ -872,6 +872,7 @@ body {
 
 .show-brands,
 .show-types {
+  display: none;
   margin: 24px;
 }
 
@@ -1496,6 +1497,12 @@ body {
   .modal-window-open {
     -webkit-transform: translateX(-320px);
             transform: translateX(-320px);
+  }
+  .show-brands,
+  .show-types {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 

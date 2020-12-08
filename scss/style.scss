@@ -411,6 +411,7 @@ $DarkGray: #7E7E82;
 }
 .show-brands,
 .show-types {
+    display: none;
     margin: 24px;
     &::after {
         content: "Показать все";

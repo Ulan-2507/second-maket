@@ -143,10 +143,13 @@ function catalogSliderInit () {
   }
 }
 
-function catalogSliderDestroy () {
+function catalogSliderDestroy() {
     if (mySwiper) {
-        mySwiper.destroy(true, true);
-        mySwiper = null;
+        for (let i = 0; i < mySwiper.length; i++) {
+            mySwiper[i].destroy();
+            mySwiper[i] = null; 
+        }
+        
     }
 }
 
@@ -155,14 +158,13 @@ function catalogSliderDestroy () {
 window.addEventListener('resize', function() {
   // Берём текущую ширину экрана
   var windowWidth = innerWidth;
-  
   // Если ширина экрана меньше или равна mediaQuerySize(768)
   if (windowWidth <= mediaQuerySize) {
     // Инициализировать слайдер если он ещё не был инициализирован
-    catalogSliderInit();
+    console.log('add')
   } else {
     // Уничтожить слайдер если он был инициализирован
-    removeStyle();
+    console.log('remove')
   }
 });
 

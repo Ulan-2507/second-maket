@@ -226,7 +226,11 @@
     .modal-window-open {
         transform: translateX(-320px);
     }
-
+    .show-brands,
+    .show-types {
+        display: flex;
+        
+    }
 }
 @media only screen and (min-width: 1120px){
     .wrapper > .container {
