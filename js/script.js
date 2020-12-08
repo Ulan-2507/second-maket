@@ -162,10 +162,10 @@ window.addEventListener('resize', function() {
   // Если ширина экрана меньше или равна mediaQuerySize(768)
   if (windowWidth <= mediaQuerySize) {
     // Инициализировать слайдер если он ещё не был инициализирован
-    console.log('add')
+    catalogSliderInit ()
   } else {
     // Уничтожить слайдер если он был инициализирован
-    console.log('remove')
+    catalogSliderDestroy()
   }
 });
 
