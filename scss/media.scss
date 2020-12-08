@@ -205,24 +205,26 @@
             margin-bottom: 268px;
         }
     }
+    .menu-open {
+        transform: translateX(320px);
+    }
+    
     .contacts {
         &__tel-cps {
             margin-bottom: 40px;
         }
     }
-    .menu-open {
-        transform: translateX(100%);
-    }  
+
     .modal-window {
-        width: 440px;
-        right: -440px;
+        width: 320px;
+        right: -320px;
         box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
         &__container {
             padding-top: 24px;
         }
     }
     .modal-window-open {
-        transform: translateX(-440px);
+        transform: translateX(-320px);
     }
 
 }
@@ -304,6 +306,9 @@
         }
        
     }
+    .main-menu__header .btn-close {
+        display: none;
+    } 
     .btn-menu {
         display: none;
     }
