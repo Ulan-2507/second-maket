@@ -135,7 +135,7 @@ function catalogSliderInit () {
         pagination: {
             el: '.swiper-pagination',
         },
-        slidesPerView: 1.3,
+        slidesPerView: 1,
     });
   }
 }
@@ -156,9 +156,8 @@ window.addEventListener('resize', function() {
   if (windowWidth <= mediaQuerySize) {
     // Инициализировать слайдер если он ещё не был инициализирован
     catalogSliderInit ()
-  } else {
-    // Уничтожить слайдер если он был инициализирован
-    catalogSliderDestroy()
-  }
+  } 
 });
+
+
 

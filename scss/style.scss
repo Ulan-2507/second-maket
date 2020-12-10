@@ -248,6 +248,13 @@ $DarkGray: #7E7E82;
     &__btn-label {
         margin: 0 9px 0 32px;
         cursor: pointer;
+        &:hover,
+        &:focus {
+            color: $DarkGray;
+        }
+        &:active {
+            color: $red
+        }
     }
 }
 
@@ -301,7 +308,7 @@ $DarkGray: #7E7E82;
             min-width: 320px;
             min-height: 176px;
             margin: 0 -16px;
-            background: url("../img/bg-320.jpg") no-repeat center center;
+            background: url("../img/bg-320.webp") no-repeat center center;
             background-size: contain;
         }
     }

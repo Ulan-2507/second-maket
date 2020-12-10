@@ -699,6 +699,14 @@ body {
   cursor: pointer;
 }
 
+.handling__btn-label:hover, .handling__btn-label:focus {
+  color: #7E7E82;
+}
+
+.handling__btn-label:active {
+  color: #ff0022;
+}
+
 .services__title {
   margin: 24px 0px;
 }
@@ -755,7 +763,7 @@ body {
   min-width: 320px;
   min-height: 176px;
   margin: 0 -16px;
-  background: url("../img/bg-320.jpg") no-repeat center center;
+  background: url("../img/bg-320.webp") no-repeat center center;
   background-size: contain;
 }
 
@@ -1362,7 +1370,7 @@ body {
     width: 360px;
     height: 208px;
     border-radius: 6px;
-    background-image: url("../img/bg-768.jpg");
+    background-image: url("../img/bg-768.webp");
   }
   .services__content-text-wrapper {
     padding-right: 36px;
