@@ -1,7 +1,4 @@
 
-
-
-
 let mainDoc = document.querySelector('.wrapper');
 let blur = document.querySelector('.layer-blur');
 let menu = document.querySelector('.main-menu');
@@ -125,38 +122,123 @@ showTypes.addEventListener('click', function () {
     showTypes.classList.toggle('hide');
 });
 
-var mySwiper = null;
-var mediaQuerySize = 768;
 
-function catalogSliderInit () {
-  if (!mySwiper) {
-    mySwiper = new Swiper('.swiper-container', {
-        spaceBetween: 16,
-        pagination: {
-            el: '.swiper-pagination',
-        },
-        slidesPerView: 1,
-    });
-  }
+
+
+const brandsSlider = mainDoc.querySelector('.brands-container');
+const repairSevSlider = mainDoc.querySelector('.repair-services-container');
+const typesSlider = mainDoc.querySelector('.types-container');
+
+function mobileBrandsSlider() {
+    
+    if (window.innerWidth <= 768 && brandsSlider.dataset.mobile == 'false') {
+        
+        mySwiper1 = new Swiper (brandsSlider, {
+            spaceBetween: 16,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            slidesPerView: 1.25,
+            breakpoints: {  
+                360: {
+                slidesPerView: 1.4,
+                spaceBetween: 24
+                },
+                480: {
+                slidesPerView: 1.8,
+                },
+                600: {
+                    slidesPerView: 2.4,
+                }
+            }
+        });
+        
+        brandsSlider.dataset.mobile = 'true';
+
+    } if (window.innerWidth > 768) {
+        brandsSlider.dataset.mobile = 'false';
+        if (brandsSlider.classList.contains('swiper-container-initialized')){
+            mySwiper1.destroy(); 
+        }
+    }    
 }
+function mobileRepairSevSlider() {
+    
+    if (window.innerWidth <= 768 && repairSevSlider.dataset.mobile == 'false') {
+        
+        mySwiper2 = new Swiper (repairSevSlider, {
+            spaceBetween: 16,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            slidesPerView: 1.25,
+            breakpoints: {  
+                360: {
+                slidesPerView: 1.4,
+                spaceBetween: 24
+                },
+                480: {
+                slidesPerView: 1.8,
+                },
+                600: {
+                    slidesPerView: 2.4,
+                }
+            }
+        });
+        
+        repairSevSlider.dataset.mobile = 'true';
 
-
-function catalogSliderDestroy() {
-    if (mySwiper) {
-        mySwiper.destroy();
-        mySwiper = null;  
-    }
+    } if (window.innerWidth > 768) {
+        repairSevSlider.dataset.mobile = 'false';
+        if (repairSevSlider.classList.contains('swiper-container-initialized')){
+            mySwiper2.destroy(); 
+        }
+        
+    }    
 }
+function mobileTypesSlider() {
+    
+    if (window.innerWidth <= 768 && typesSlider.dataset.mobile == 'false') {
+        
+        mySwiper3 = new Swiper (typesSlider, {
+            spaceBetween: 16,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            slidesPerView: 1.25,
+            breakpoints: {  
+                360: {
+                slidesPerView: 1.4,
+                spaceBetween: 24
+                },
+                480: {
+                slidesPerView: 1.8,
+                },
+                600: {
+                    slidesPerView: 2.4,
+                }
+            }
+        });
+        
+        typesSlider.dataset.mobile = 'true';
 
+    } if (window.innerWidth > 768) {
+        typesSlider.dataset.mobile = 'false';
+        if (typesSlider.classList.contains('swiper-container-initialized')){
+            mySwiper3.destroy(); 
+        } 
+        
+    }    
+}
+    
+mobileBrandsSlider();
+mobileRepairSevSlider();
+mobileTypesSlider()
 
-window.addEventListener('resize', function() {
-  // Берём текущую ширину экрана
-  var windowWidth = innerWidth;
-  // Если ширина экрана меньше или равна mediaQuerySize(768)
-  if (windowWidth <= mediaQuerySize) {
-    // Инициализировать слайдер если он ещё не был инициализирован
-    catalogSliderInit ()
-  } 
+window.addEventListener('resize', () => {
+    mobileBrandsSlider();
+    mobileRepairSevSlider();
+    mobileTypesSlider()
 });
 
 

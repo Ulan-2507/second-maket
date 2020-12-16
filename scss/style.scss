@@ -20,9 +20,10 @@
     font-weight: 400;
     font-style: normal;
 }
-
-@import 'swiper.scss';
-@import 'pagination.scss';
+/*Слайдер*/
+@import 'swiper-vars';
+@import 'swiper';
+@import 'pagination';
 
 /*Обнуление*/
 *{
@@ -386,11 +387,14 @@ $DarkGray: #7E7E82;
 .brands-container {
     height: 154px;
 }
+.swiper-container {
+    margin: 0 -16px;
+    padding-left: 16px;
+}
 .swiper-wrapper {
     box-sizing: border-box;
 }
 .swiper-slide {
-    width: 240px !important;
     margin-top: 16px;
     margin-bottom: 16px;
     
@@ -791,4 +795,4 @@ $DarkGray: #7E7E82;
     transform: translateX(-100vw);
 }
 
-@import "media.scss";
+@import "media";
