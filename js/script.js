@@ -9,8 +9,6 @@ let callback = mainDoc.querySelector('.callback');
 let btnsChat = mainDoc.querySelectorAll('.btn-chat');
 let feedback = mainDoc.querySelector('.feedback');
 
-
-
 btnMenu.addEventListener('click', function () {
     menu.classList.add('menu-open');
     menu.classList.remove('visibility-hidden');
